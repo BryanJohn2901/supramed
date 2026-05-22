@@ -4,7 +4,7 @@
     display: block;
     width: 48px;
     height: 3px;
-    background: #33A8A6;
+    background: #0D9488;
     margin: 12px auto 0;
     border-radius: 2px;
 }
@@ -14,8 +14,8 @@
 }
 
 .nav-link-active {
-    background: rgba(51, 168, 166, 0.1);
-    color: #33A8A6;
+    background: rgba(13, 148, 136, 0.1);
+    color: #0D9488;
     font-weight: 600;
 }
 
@@ -34,7 +34,7 @@ main {
 }
 
 #header.scrolled .main-nav {
-    box-shadow: 0 4px 20px rgba(61, 61, 71, 0.08);
+    box-shadow: 0 4px 20px rgba(10, 15, 28, 0.08);
 }
 
 body.modal-open {
@@ -48,8 +48,8 @@ body.modal-open {
 }
 .page-hero--light {
     padding: 5rem 0;
-    background-color: #F5F5F8;
-    border-bottom: 1px solid #D9D9E3;
+    background-color: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
 }
 @media (min-width: 1024px) {
     .page-hero--light {
@@ -76,10 +76,10 @@ body.modal-open {
 .page-hero--image .page-hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(105deg, rgba(61, 61, 71, 0.92) 0%, rgba(51, 168, 166, 0.45) 55%, rgba(61, 61, 71, 0.4) 100%);
+    background: linear-gradient(105deg, rgba(10, 15, 28, 0.92) 0%, rgba(13, 148, 136, 0.45) 55%, rgba(10, 15, 28, 0.4) 100%);
 }
 .page-hero__eyebrow {
-    color: #33A8A6;
+    color: #0D9488;
     font-weight: 700;
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -87,12 +87,12 @@ body.modal-open {
     margin-bottom: 1rem;
 }
 .page-hero--image .page-hero__eyebrow {
-    color: #85DEC4;
+    color: #5EEAD4;
 }
 .page-hero__title {
     font-size: clamp(1.875rem, 4vw, 3rem);
     font-weight: 700;
-    color: #3D3D47;
+    color: #0A0F1C;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
@@ -102,7 +102,7 @@ body.modal-open {
 }
 .page-hero__subtitle {
     font-size: 1.125rem;
-    color: #7B7B87;
+    color: #94A3B8;
     line-height: 1.65;
     font-weight: 300;
 }
@@ -120,7 +120,7 @@ body.modal-open {
     }
 }
 .section-page--alt {
-    background-color: #F5F5F8;
+    background-color: #F8FAFC;
 }
 
 /* CTA final */
@@ -154,7 +154,7 @@ body.modal-open {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease, visibility 0.8s;
-    background-color: #3D3D47;
+    background-color: #0A0F1C;
 }
 .hero-slide.active {
     opacity: 1;
@@ -172,12 +172,12 @@ body.modal-open {
 .hero-slide-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(105deg, rgba(61, 61, 71, 0.9) 0%, rgba(51, 168, 166, 0.45) 50%, rgba(61, 61, 71, 0.35) 100%);
+    background: linear-gradient(105deg, rgba(10, 15, 28, 0.9) 0%, rgba(13, 148, 136, 0.45) 50%, rgba(10, 15, 28, 0.35) 100%);
 }
 .hero-tab.active {
-    background: #33A8A6;
+    background: #0D9488;
     color: #fff;
-    border-color: #33A8A6;
+    border-color: #0D9488;
 }
 .hero-progress {
     transition: width 0.1s linear;
@@ -232,8 +232,8 @@ mark.search-hit {
     font-weight: 700;
     font-size: 1.125rem;
     color: #fff;
-    background: linear-gradient(90deg, #85DEC4 0%, #33A8A6 100%);
-    box-shadow: 0 10px 30px rgba(51, 168, 166, 0.25);
+    background: linear-gradient(90deg, #5EEAD4 0%, #0D9488 100%);
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.25);
     transition: opacity 0.3s, transform 0.3s;
 }
 .btn-primary:hover {
