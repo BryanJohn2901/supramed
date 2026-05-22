@@ -294,11 +294,26 @@ tailwind.config = {
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="cta-band bg-gradient-neutral">
-            <div class="container mx-auto px-6" data-aos="zoom-in">
+        <!-- CTA com mapa de fundo -->
+        <section class="cta-band relative overflow-hidden">
+            <!-- Google Maps fundo -->
+            <div class="absolute inset-0 z-0">
+                <iframe
+                    src="https://maps.google.com/maps?q=S%C3%A3o+Paulo%2C+SP%2C+Brasil&z=12&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0; filter: grayscale(20%) brightness(0.55);"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização Supramed — São Paulo, SP"
+                ></iframe>
+                <!-- Overlay gradiente para manter contraste do texto -->
+                <div class="absolute inset-0 bg-brand-dark/60 bg-gradient-to-r from-brand-dark/80 via-brand-dark/50 to-brand-dark/70"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10" data-aos="zoom-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Vamos transformar a saúde juntos?</h2>
-                <p class="text-palette-100 mb-8 max-w-xl mx-auto">Fale com nossos especialistas e conheça como a Supramed pode apoiar seu projeto.</p>
+                <p class="text-gray-200 mb-8 max-w-xl mx-auto">Fale com nossos especialistas e conheça como a Supramed pode apoiar seu projeto.</p>
                 <a href="/contato/" class="btn-primary">Fale Conosco <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </section>
