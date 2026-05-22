@@ -8,7 +8,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(jpg|jpeg|png|svg|webp|ico))",
+      "source": "/:path*\\.(jpg|jpeg|png|svg|webp|ico)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=2592000" }
       ]
