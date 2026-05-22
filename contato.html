@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Supramed Saúde</title>
+    <meta name="description" content="Entre em contato com a Supramed. Estamos prontos para discutir como transformar seu projeto de saúde.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                brand: {
+                    dark: '#3D3D47',
+                    navy: '#555561',
+                    light: '#F5F5F8',
+                    teal: '#33A8A6',
+                    tealHover: '#2E9896',
+                    tealLight: '#85DEC4'
+                },
+                saude: { light: '#85DEC4', dark: '#33A8A6' },
+                vida: { light: '#FFAB9C', dark: '#FF6C89' },
+                qualidade: { light: '#75A8F8', dark: '#7B4DF5' },
+                neutral: { light: '#C6C6D1', dark: '#3D3D47' },
+                sec: {
+                    yellow: '#FCEE5D',
+                    orange: '#EFA24A',
+                    red: '#FF5D5D',
+                    green: '#70D79A',
+                    blue: '#3B6BFF',
+                    purple: '#5B00B2'
+                },
+                palette: {
+                    50: '#FFFFFF',
+                    100: '#D9D9E3',
+                    200: '#A9A9B3',
+                    300: '#7B7B87',
+                    400: '#555561',
+                    500: '#3D3D47'
+                }
+            },
+            backgroundImage: {
+                'gradient-saude': 'linear-gradient(90deg, #85DEC4 0%, #33A8A6 100%)',
+                'gradient-vida': 'linear-gradient(90deg, #FFAB9C 0%, #FF6C89 100%)',
+                'gradient-qualidade': 'linear-gradient(90deg, #75A8F8 0%, #7B4DF5 100%)',
+                'gradient-neutral': 'linear-gradient(90deg, #C6C6D1 0%, #3D3D47 100%)'
+            },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                heading: ['Inter', 'sans-serif'],
+                display: ['Inter', 'sans-serif']
+            }
+        }
+    }
+};
+    </script>
+</head>
+<body class="font-sans text-palette-500 bg-white antialiased">
+
+    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-500">
+        <div class="bg-brand-dark text-palette-200 text-xs sm:text-sm tracking-widest uppercase hidden sm:block">
+            <div class="container mx-auto px-6 py-3.5 flex justify-between items-center font-sans min-h-[44px]">
+                <div class="flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    <span class="text-gray-200 font-medium tracking-wider">Portal Institucional Supramed</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="mailto:contato@supramed.com.br" class="hover:text-brand-teal transition-colors flex items-center gap-2"><i class="fa-regular fa-envelope"></i> contato@supramed.com.br</a>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-teal"></i> (11) 4000-0000</span>
+                    <div class="w-px h-3 bg-gray-700 mx-1"></div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="hover:text-brand-teal transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-brand-teal transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav bg-[#FFFFFF] border-b border-gray-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
+                <a href="index.html" class="flex items-center shrink-0 group" aria-label="Supramed Saúde — Home">
+                    <img src="logo.jpeg" alt="Supramed Saúde" width="260" height="60" class="h-12 sm:h-14 w-auto max-w-[260px] object-contain object-left transition-opacity duration-300 group-hover:opacity-90">
+                </a>
+                <nav class="hidden lg:flex items-center gap-2 text-[15px] font-medium text-gray-600 font-sans"><a href="index.html" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Home</a><a href="nossas-atuacoes.html" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Nossa Atuação</a><a href="quem-somos.html" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a><a href="cases.html" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Cases</a><a href="blog.html" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Blog</a><a href="contato.html" class="nav-link-active px-5 py-2.5 rounded-full transition-all duration-300">Contato</a></nav>
+                <div class="flex items-center gap-5">
+                    <button type="button" id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-brand-dark border border-gray-200 rounded-full hover:bg-gray-50 transition" aria-label="Menu"><i class="fa-solid fa-bars-staggered"></i></button>
+                </div>
+            </div>
+            <nav id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-[#FFFFFF] px-6 py-6 flex flex-col gap-2 text-base font-medium text-gray-600 absolute w-full shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+                <a href="index.html" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Home</a><a href="nossas-atuacoes.html" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Nossa Atuação</a><a href="quem-somos.html" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a><a href="cases.html" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Cases</a><a href="blog.html" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Blog</a><a href="contato.html" class="nav-link-active px-4 py-3 rounded-xl transition-colors">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="page-hero page-hero--image">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=85&auto=format&fit=crop" alt="Profissional de saúde" class="page-hero__bg">
+            <div class="page-hero__overlay"></div>
+            <div class="container mx-auto px-6 text-center max-w-3xl relative z-10" data-aos="fade-up">
+                <p class="page-hero__eyebrow">Contato</p>
+                <h1 class="page-hero__title">Entre em Contato</h1>
+                <p class="page-hero__subtitle">
+                    Estamos prontos para discutir como a Supramed pode transformar seu projeto de saúde.
+                </p>
+            </div>
+        </section>
+
+        <!-- Informações + Formulário -->
+        <section class="section-page bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+                    <!-- Dados de contato -->
+                    <div class="lg:col-span-5 space-y-6" data-aos="fade-right">
+                        <a href="mailto:contato@supramed.com.br" class="flex gap-5 p-6 rounded-2xl bg-brand-light border border-palette-100 hover:border-brand-teal/30 hover:shadow-md transition-all group">
+                            <div class="w-14 h-14 shrink-0 rounded-xl bg-gradient-saude text-white flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-palette-300 uppercase tracking-wider mb-1">Email</span>
+                                <span class="text-brand-dark font-semibold group-hover:text-brand-teal transition-colors">contato@supramed.com.br</span>
+                            </div>
+                        </a>
+                        <a href="tel:+551140000000" class="flex gap-5 p-6 rounded-2xl bg-brand-light border border-palette-100 hover:border-brand-teal/30 hover:shadow-md transition-all group">
+                            <div class="w-14 h-14 shrink-0 rounded-xl bg-gradient-qualidade text-white flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-palette-300 uppercase tracking-wider mb-1">Telefone</span>
+                                <span class="text-brand-dark font-semibold group-hover:text-brand-teal transition-colors">(11) 4000-0000</span>
+                            </div>
+                        </a>
+                        <div class="flex gap-5 p-6 rounded-2xl bg-brand-light border border-palette-100">
+                            <div class="w-14 h-14 shrink-0 rounded-xl bg-gradient-vida text-white flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-palette-300 uppercase tracking-wider mb-1">Endereço</span>
+                                <span class="text-brand-dark font-semibold">São Paulo, SP — Brasil</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 p-6 rounded-2xl bg-brand-light border border-palette-100">
+                            <div class="w-14 h-14 shrink-0 rounded-xl bg-brand-dark text-white flex items-center justify-center text-xl">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-palette-300 uppercase tracking-wider mb-1">Horário</span>
+                                <span class="text-brand-dark font-semibold">Seg–Sex: 9h às 18h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulário -->
+                    <div class="lg:col-span-7" data-aos="fade-left">
+                        <div class="bg-white rounded-3xl border border-palette-100 shadow-[0_8px_40px_rgba(61,61,71,0.08)] p-8 lg:p-10">
+                            <h2 class="text-2xl font-bold text-brand-dark mb-8">Envie sua Mensagem</h2>
+                            <form id="contactForm" class="space-y-5">
+                                <div>
+                                    <label for="nome" class="block text-sm font-medium text-palette-400 mb-1.5">Nome Completo <span class="text-vida-dark">*</span></label>
+                                    <input type="text" id="nome" name="nome" required placeholder="Seu nome" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-palette-400 mb-1.5">Email <span class="text-vida-dark">*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="seu@email.com" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="telefone" class="block text-sm font-medium text-palette-400 mb-1.5">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone" maxlength="15" placeholder="(11) 99999-9999" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="empresa" class="block text-sm font-medium text-palette-400 mb-1.5">Empresa/Instituição</label>
+                                    <input type="text" id="empresa" name="empresa" placeholder="Nome da instituição" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="mensagem" class="block text-sm font-medium text-palette-400 mb-1.5">Mensagem <span class="text-vida-dark">*</span></label>
+                                    <textarea id="mensagem" name="mensagem" required rows="5" placeholder="Conte-nos sobre seu projeto..." class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition resize-y min-h-[140px]"></textarea>
+                                </div>
+                                <button type="submit" id="btnSubmit" class="w-full bg-gradient-saude hover:opacity-90 text-white py-4 rounded-full font-bold text-lg shadow-lg transition-all hover:-translate-y-0.5">
+                                    Enviar Mensagem
+                                </button>
+                                <p class="text-xs text-palette-300 text-center"><span class="text-vida-dark">*</span> Campos obrigatórios</p>
+                                <div id="formMsg" class="text-sm text-center hidden"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-band bg-gradient-neutral">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute bottom-0 right-0 w-96 h-96 bg-saude-light/20 blur-[120px] rounded-full"></div>
+                <div class="absolute top-0 left-0 w-72 h-72 bg-qualidade-dark/25 blur-[100px] rounded-full"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10 max-w-2xl" data-aos="zoom-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pronto para Começar?</h2>
+                <p class="text-palette-100 text-lg leading-relaxed mb-8">
+                    Nossa equipe está preparada para discutir as melhores soluções para seu projeto de saúde.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="nossas-atuacoes.html" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border-2 border-white/40 hover:bg-white/10 font-semibold transition-all">
+                        Conheça Nossa Atuação <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="cases.html" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white text-brand-dark font-semibold hover:bg-gray-100 transition-all">
+                        Ver Cases de Sucesso
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer id="footer" class="bg-brand-dark text-white pt-20 pb-8 border-t border-white/10 relative overflow-hidden font-sans">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-brand-teal/40 to-transparent blur-[2px]"></div>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                <div class="lg:col-span-4 pr-0 lg:pr-8">
+                    <a href="index.html" class="inline-block mb-6"><img src="logo.jpeg" alt="Supramed Saúde" class="h-12 w-auto brightness-0 invert opacity-95"></a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">Especialistas em saúde de alta complexidade, infraestrutura hospitalar e gestão médica estruturada para os setores público e privado.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 lg:col-start-6">
+                    <h4 class="font-bold text-lg text-white mb-6 tracking-wide">Navegação</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html" class="group flex items-center gap-2 hover:text-white transition-colors duration-300"><span class="w-1 h-1 rounded-full bg-brand-teal opacity-0 group-hover:opacity-100 transition-opacity"></span> Home</a></li>
+                        <li><a href="nossas-atuacoes.html" class="group flex items-center gap-2 hover:text-white transition-colors duration-300"><span class="w-1 h-1 rounded-full bg-brand-teal opacity-0 group-hover:opacity-100 transition-opacity"></span> Nossa Atuação</a></li>
+                        <li><a href="quem-somos.html" class="group flex items-center gap-2 hover:text-white transition-colors duration-300"><span class="w-1 h-1 rounded-full bg-brand-teal opacity-0 group-hover:opacity-100 transition-opacity"></span> Quem Somos</a></li>
+                        <li><a href="cases.html" class="group flex items-center gap-2 hover:text-white transition-colors duration-300"><span class="w-1 h-1 rounded-full bg-brand-teal opacity-0 group-hover:opacity-100 transition-opacity"></span> Cases</a></li>
+                        <li><a href="blog.html" class="group flex items-center gap-2 hover:text-white transition-colors duration-300"><span class="w-1 h-1 rounded-full bg-brand-teal opacity-0 group-hover:opacity-100 transition-opacity"></span> Blog</a></li>
+                        <li><a href="contato.html" class="group flex items-center gap-2 hover:text-white transition-colors duration-300"><span class="w-1 h-1 rounded-full bg-brand-teal opacity-0 group-hover:opacity-100 transition-opacity"></span> Contato</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3">
+                    <h4 class="font-bold text-lg text-white mb-6 tracking-wide">Expertise</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-teal/60 text-[10px]"></i> Parcerias Público-Privadas</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-teal/60 text-[10px]"></i> Infraestrutura Hospitalar</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-teal/60 text-[10px]"></i> Gestão Médica</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-teal/60 text-[10px]"></i> Serviços Não Assistenciais</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-teal/60 text-[10px]"></i> Tecnologia em Saúde</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h4 class="font-bold text-lg text-white mb-6 tracking-wide">Contato</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex gap-3 items-start"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 mt-0.5 text-brand-teal"><i class="fa-solid fa-location-dot text-xs"></i></div><span class="leading-relaxed">São Paulo, SP<br>Brasil</span></li>
+                        <li><a href="tel:+551140000000" class="flex gap-3 items-center hover:text-white transition-colors group"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-colors"><i class="fa-solid fa-phone text-xs"></i></div>(11) 4000-0000</a></li>
+                        <li><a href="mailto:contato@supramed.com.br" class="flex gap-3 items-center hover:text-white transition-colors group"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-colors"><i class="fa-regular fa-envelope text-xs"></i></div>contato@supramed.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-gray-500 font-medium">&copy; 2026 Supramed. Todos os direitos reservados.</p>
+                <div class="flex items-center gap-6 text-xs text-gray-500 font-medium">
+                    <a href="#" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>
+                    <a href="#" class="hover:text-brand-teal transition-colors">Termos de Uso</a>
+                    <button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300 group" aria-label="Voltar ao topo"><i class="fa-solid fa-chevron-up group-hover:-translate-y-0.5 transition-transform"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script>
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnSubmit');
+            const msg = document.getElementById('formMsg');
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+            fetch('https://hook.us1.make.com/YOUR_WEBHOOK_ID', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    nome: document.getElementById('nome').value,
+                    email: document.getElementById('email').value,
+                    telefone: document.getElementById('telefone').value,
+                    empresa: document.getElementById('empresa').value,
+                    mensagem: document.getElementById('mensagem').value,
+                    origem: 'contato'
+                })
+            })
+            .then(() => {
+                msg.className = 'text-sm text-center text-green-600';
+                msg.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+                msg.classList.remove('hidden');
+                this.reset();
+            })
+            .catch(() => {
+                msg.className = 'text-sm text-center text-red-600';
+                msg.textContent = 'Erro ao enviar. Tente novamente ou envie um e-mail para contato@supramed.com.br.';
+                msg.classList.remove('hidden');
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.textContent = 'Enviar Mensagem';
+            });
+        });
+    </script>
+</body>
+</html>
