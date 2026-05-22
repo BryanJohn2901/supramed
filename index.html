@@ -20,13 +20,7 @@
     <meta name="twitter:description" content="Especialistas em estruturação, implantação e operação de projetos de saúde de alta complexidade.">
     <meta name="twitter:image" content="https://supramed.com.br/og-image.jpg">
 
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-XXXXXXX');
-    </script>
+    <script src="/assets/js/config.js"></script>
 
     <script type="application/ld+json">
     {
@@ -45,8 +39,7 @@
         "addressCountry": "BR"
       },
       "sameAs": [
-        "https://www.linkedin.com/company/supramed",
-        "https://www.instagram.com/supramed"
+        "https://wa.me/551140000000"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -56,70 +49,30 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Supramed",
+      "url": "https://supramed.com.br",
+      "description": "Gestão hospitalar, PPPs em saúde e infraestrutura de alta complexidade.",
+      "publisher": { "@type": "Organization", "name": "Supramed" },
+      "inLanguage": "pt-BR"
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     <link rel="preconnect" href="https://images.pexels.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/css/site.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                brand: {
-                    dark: '#0A0F1C',
-                    navy: '#1E293B',
-                    light: '#F8FAFC',
-                    teal: '#0D9488',
-                    tealHover: '#0F766E',
-                    tealLight: '#5EEAD4'
-                },
-                saude: { light: '#5EEAD4', dark: '#0D9488' },
-                vida: { light: '#FDA4AF', dark: '#E11D48' },
-                qualidade: { light: '#93C5FD', dark: '#2563EB' },
-                neutral: { light: '#E2E8F0', dark: '#0A0F1C' },
-                sec: {
-                    yellow: '#FBBF24',
-                    orange: '#F97316',
-                    red: '#EF4444',
-                    green: '#10B981',
-                    blue: '#3B82F6',
-                    purple: '#8B5CF6'
-                },
-                palette: {
-                    50: '#FFFFFF',
-                    100: '#F1F5F9',
-                    200: '#E2E8F0',
-                    300: '#CBD5E1',
-                    400: '#94A3B8',
-                    500: '#64748B'
-                }
-            },
-            backgroundImage: {
-                'gradient-saude': 'linear-gradient(135deg, #5EEAD4 0%, #0D9488 100%)',
-                'gradient-vida': 'linear-gradient(135deg, #FDA4AF 0%, #E11D48 100%)',
-                'gradient-qualidade': 'linear-gradient(135deg, #93C5FD 0%, #2563EB 100%)',
-                'gradient-neutral': 'linear-gradient(135deg, #E2E8F0 0%, #0A0F1C 100%)'
-            },
-            fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                heading: ['Outfit', 'sans-serif'],
-                display: ['Outfit', 'sans-serif']
-            }
-        }
-    }
-};
-    </script>
+    <link rel="stylesheet" href="/assets/css/tailwind-built.css">
 </head>
-<body class="font-sans text-palette-500 bg-white antialiased">
-
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body class="font-sans text-palette-500 bg-white antialiased" data-page="home">
 
     <header id="header" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="bg-brand-dark text-palette-200 text-xs sm:text-sm tracking-widest uppercase hidden sm:block">
@@ -133,8 +86,8 @@ tailwind.config = {
                     <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-teal"></i> (11) 4000-0000</span>
                     <div class="w-px h-3 bg-gray-700 mx-1"></div>
                     <div class="flex items-center gap-4">
-                        <a href="#" class="hover:text-brand-teal transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="hover:text-brand-teal transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:contato@supramed.com.br" class="hover:text-brand-teal transition-colors" aria-label="E-mail" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="#" class="js-whatsapp hover:text-brand-teal transition-colors" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -142,15 +95,16 @@ tailwind.config = {
         <div class="main-nav bg-white/85 backdrop-blur-xl border-b border-gray-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-300">
             <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
                 <a href="/" class="flex items-center shrink-0 group" aria-label="Supramed Saúde — Home">
-                    <img src="/logo-supramed-ong.png" alt="Supramed Saúde" width="320" height="80" class="h-16 sm:h-20 w-auto max-w-[320px] object-contain object-left transition-opacity duration-300 group-hover:opacity-90">
+                    <img loading="lazy" decoding="async" src="/logo-supramed-ong.png" alt="Supramed Saúde" width="320" height="80" class="h-16 sm:h-20 w-auto max-w-[320px] object-contain object-left transition-opacity duration-300 group-hover:opacity-90">
                 </a>
                 <nav class="hidden lg:flex items-center gap-2 text-[15px] font-medium text-gray-600 font-sans"><a href="/" class="nav-link-active px-5 py-2.5 rounded-full transition-all duration-300">Home</a><a href="/nossas-atuacoes/" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Nossa Atuação</a><a href="/quem-somos/" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a><a href="/cases/" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Cases</a><a href="/blog/" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Blog</a><a href="/contato/" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Contato</a></nav>
-                <div class="flex items-center gap-5"><button type="button" id="searchBtn" onclick="openSearch()" class="hidden md:flex text-gray-400 hover:text-brand-teal transition-colors" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
+                <div class="flex items-center gap-3 lg:gap-4">
+                    <a href="#" class="js-whatsapp-open btn-nav-cta hidden lg:inline-flex" aria-label="Fale com um especialista"><span>Fale com um especialista</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
                     <button type="button" id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-brand-dark border border-gray-200 rounded-full hover:bg-gray-50 transition" aria-label="Menu"><i class="fa-solid fa-bars-staggered"></i></button>
                 </div>
             </div>
-            <nav id="mobileMenu" class="hidden lg:hidden border-t border-gray-100/50 bg-white/95 backdrop-blur-2xl px-6 py-6 flex flex-col gap-2 text-base font-medium text-gray-600 absolute w-full shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
-                <button type="button" onclick="openSearch(); document.getElementById('mobileMenu').classList.add('hidden');" class="px-4 py-3 hover:bg-brand-teal/5 rounded-xl hover:text-brand-teal transition-colors text-left flex items-center gap-3"><i class="fa-solid fa-magnifying-glass text-brand-teal"></i> Buscar no site</button><a href="/" class="nav-link-active px-4 py-3 rounded-xl transition-colors">Home</a><a href="/nossas-atuacoes/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Nossa Atuação</a><a href="/quem-somos/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a><a href="/cases/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Cases</a><a href="/blog/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Blog</a><a href="/contato/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Contato</a>
+            <nav id="mobileMenu" class="lg:hidden" aria-label="Menu mobile">
+                <a href="#" class="js-whatsapp-open btn-nav-cta btn-nav-cta--mobile lg:hidden" aria-label="Fale com um especialista"><span>Fale com um especialista</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a><a href="/" class="nav-link-active px-4 py-3 rounded-xl transition-colors">Home</a><a href="/nossas-atuacoes/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Nossa Atuação</a><a href="/quem-somos/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a><a href="/cases/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Cases</a><a href="/blog/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Blog</a><a href="/contato/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Contato</a>
             </nav>
         </div>
     </header>
@@ -194,7 +148,7 @@ tailwind.config = {
                             <p class="text-brand-teal font-semibold text-sm uppercase tracking-wider mb-3">Infraestrutura &amp; Gestão Médica</p>
                             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">Da Infraestrutura à Gestão Médica de Excelência</h2>
                             <p class="text-gray-200 text-lg mb-8 leading-relaxed">Integração de engenharia clínica, operação assistencial e tecnologia para o cuidado integral do paciente.</p>
-                            <a href="/contato/" class="inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-white px-8 py-3.5 rounded-full font-semibold transition shadow-lg">Fale com um Especialista <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                            <a href="#" class="js-whatsapp inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-white px-8 py-3.5 rounded-full font-semibold transition shadow-lg">Fale Conosco <i class="fa-brands fa-whatsapp text-sm"></i></a>
                         </div>
                     </div>
                 </div>
@@ -246,7 +200,7 @@ tailwind.config = {
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <article class="relative h-[420px] rounded-2xl overflow-hidden group cursor-hover shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-up" data-aos-delay="0">
-                        <img src="/assets/images/meeting-ppp.jpg" alt="Parcerias Público-Privadas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img loading="lazy" decoding="async" src="/assets/images/meeting-ppp.jpg" alt="Parcerias Público-Privadas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
                         
                         <div class="absolute inset-0 p-8 flex flex-col justify-end">
@@ -267,7 +221,7 @@ tailwind.config = {
                     </article>
         
                     <article class="relative h-[420px] rounded-2xl overflow-hidden group cursor-hover shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-up" data-aos-delay="100">
-                        <img src="/assets/images/hospital-complex.jpg" alt="Infraestrutura Hospitalar" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img loading="lazy" decoding="async" src="/assets/images/hospital-complex.jpg" alt="Infraestrutura Hospitalar" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
                         
                         <div class="absolute inset-0 p-8 flex flex-col justify-end">
@@ -288,7 +242,7 @@ tailwind.config = {
                     </article>
         
                     <article class="relative h-[420px] rounded-2xl overflow-hidden group cursor-hover shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-up" data-aos-delay="200">
-                        <img src="/assets/images/medical-management.jpg" alt="Gestão Médica" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img loading="lazy" decoding="async" src="/assets/images/medical-management.jpg" alt="Gestão Médica" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
                         
                         <div class="absolute inset-0 p-8 flex flex-col justify-end">
@@ -309,7 +263,7 @@ tailwind.config = {
                     </article>
         
                     <article class="relative h-[420px] rounded-2xl overflow-hidden group cursor-hover shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-up" data-aos-delay="0">
-                        <img src="/assets/images/hospital-modern.jpg" alt="Serviços Não Assistenciais" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img loading="lazy" decoding="async" src="/assets/images/hospital-modern.jpg" alt="Serviços Não Assistenciais" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
                         
                         <div class="absolute inset-0 p-8 flex flex-col justify-end">
@@ -330,7 +284,7 @@ tailwind.config = {
                     </article>
         
                     <article class="relative h-[420px] rounded-2xl overflow-hidden group cursor-hover shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-up" data-aos-delay="100">
-                        <img src="/assets/images/health-tech.jpg" alt="Tecnologia em Saúde" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img loading="lazy" decoding="async" src="/assets/images/health-tech.jpg" alt="Tecnologia em Saúde" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
                         
                         <div class="absolute inset-0 p-8 flex flex-col justify-end">
@@ -351,7 +305,7 @@ tailwind.config = {
                     </article>
         
                     <article class="relative h-[420px] rounded-2xl overflow-hidden group cursor-hover shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-up" data-aos-delay="200">
-                        <img src="/assets/images/compliance.jpg" alt="Governança e Compliance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img loading="lazy" decoding="async" src="/assets/images/compliance.jpg" alt="Governança e Compliance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
                         
                         <div class="absolute inset-0 p-8 flex flex-col justify-end">
@@ -389,14 +343,14 @@ tailwind.config = {
                     <div class="relative" data-aos="fade-right">
                         <div class="relative z-10 w-[85%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                             <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                            <img src="/assets/images/hospital-infrastructure.jpg" alt="Infraestrutura hospitalar de ponta" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+                            <img loading="lazy" decoding="async" src="/assets/images/hospital-infrastructure.jpg" alt="Infraestrutura hospitalar de ponta" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
                         </div>
         
                         <div class="absolute -bottom-10 right-0 w-[60%] z-20 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-8 border-white" data-aos="fade-up" data-aos-delay="200">
-                            <img src="/assets/images/medical-team.jpg" alt="Equipe médica especializada" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700">
+                            <img loading="lazy" decoding="async" src="/assets/images/medical-team.jpg" alt="Equipe médica especializada" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700">
                         </div>
         
-                        <a href="#" class="absolute top-10 -left-6 lg:-left-12 z-30 bg-white/80 backdrop-blur-xl p-4 pr-6 rounded-2xl shadow-2xl border border-white/50 flex items-center gap-4 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(51,168,166,0.15)] transition-all duration-300 group cursor-hover" data-aos="fade-right" data-aos-delay="400">
+                        <a href="/contato/" class="absolute top-10 -left-6 lg:-left-12 z-30 bg-white/80 backdrop-blur-xl p-4 pr-6 rounded-2xl shadow-2xl border border-white/50 flex items-center gap-4 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(51,168,166,0.15)] transition-all duration-300 group cursor-hover" data-aos="fade-right" data-aos-delay="400">
                             <div class="w-12 h-12 bg-gradient-to-br from-brand-teal to-brand-tealHover text-white rounded-full flex items-center justify-center text-lg shadow-inner">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </div>
@@ -463,7 +417,7 @@ tailwind.config = {
         <!-- Vídeo / Case destaque -->
         <section id="cases-video" class="relative py-32 md:py-48 overflow-hidden group cursor-hover" onclick="scrollToSection('cases')">
             <div class="absolute inset-0 z-0">
-                <img 
+                <img loading="lazy" decoding="async" 
                     src="/assets/images/aerial-view.jpg" 
                     alt="Vista aérea de complexo hospitalar" 
                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1500ms] ease-out"
@@ -504,7 +458,7 @@ tailwind.config = {
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div data-aos="fade-right">
-                        <img src="/assets/images/hospital-complex.jpg" alt="Hospital de Pinhais" class="rounded-xl shadow-xl w-full h-[400px] object-cover">
+                        <img loading="lazy" decoding="async" src="/assets/images/hospital-complex.jpg" alt="Hospital de Pinhais" class="rounded-xl shadow-xl w-full h-[400px] object-cover">
                     </div>
                     <div data-aos="fade-left">
                         <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Infraestrutura de Excelência em Tempo Recorde</h2>
@@ -546,7 +500,7 @@ tailwind.config = {
                     
                     <article class="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-gray-100 transition-all duration-500 hover:-translate-y-1 cursor-hover" data-aos="fade-up" data-aos-delay="0">
                         <div class="relative h-60 overflow-hidden">
-                            <img src="/assets/images/meeting-ppp.jpg" alt="Reunião de estruturação de PPP" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <img loading="lazy" decoding="async" src="/assets/images/meeting-ppp.jpg" alt="Reunião de estruturação de PPP" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                             <div class="absolute top-5 left-5 z-20">
                                 <span class="bg-white/90 backdrop-blur-md text-brand-dark text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">Gestão Pública</span>
@@ -571,7 +525,7 @@ tailwind.config = {
 
                     <article class="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-gray-100 transition-all duration-500 hover:-translate-y-1 cursor-hover" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative h-60 overflow-hidden">
-                            <img src="/assets/images/hospital-complex.jpg" alt="Corredor do Hospital de Pinhais" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <img loading="lazy" decoding="async" src="/assets/images/hospital-complex.jpg" alt="Corredor do Hospital de Pinhais" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                             <div class="absolute top-5 left-5 z-20">
                                 <span class="bg-brand-teal/90 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">Case de Sucesso</span>
@@ -596,7 +550,7 @@ tailwind.config = {
         
                     <article class="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-gray-100 transition-all duration-500 hover:-translate-y-1 cursor-hover" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative h-60 overflow-hidden">
-                            <img src="/assets/images/health-tech.jpg" alt="Painel de tecnologia hospitalar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <img loading="lazy" decoding="async" src="/assets/images/health-tech.jpg" alt="Painel de tecnologia hospitalar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                             <div class="absolute top-5 left-5 z-20">
                                 <span class="bg-white/90 backdrop-blur-md text-brand-dark text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">Inovação</span>
@@ -646,7 +600,7 @@ tailwind.config = {
                         </p>
                         
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white group cursor-hover hidden md:block">
-                            <img src="/assets/images/management-team.jpg" alt="Equipe de Gestão e Operações" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700">
+                            <img loading="lazy" decoding="async" src="/assets/images/management-team.jpg" alt="Equipe de Gestão e Operações" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors duration-500"></div>
                             
                             <div class="absolute bottom-5 left-5 bg-white/90 backdrop-blur-md px-5 py-3 rounded-xl shadow-lg flex items-center gap-4">
@@ -768,9 +722,9 @@ tailwind.config = {
                 </p>
         
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="/contato/" class="w-full sm:w-auto bg-gradient-saude hover:opacity-90 text-white px-10 py-4 rounded-full font-bold text-lg shadow-[0_0_30px_rgba(51,168,166,0.35)] hover:shadow-[0_0_50px_rgba(133,222,196,0.45)] transition-all duration-300 hover:-translate-y-1 cursor-hover flex items-center justify-center gap-3 group">
-                        Fale Conosco Agora
-                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    <a href="#" class="btn-primary js-whatsapp w-full sm:w-auto">
+                        Fale Conosco
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
         
@@ -793,12 +747,12 @@ tailwind.config = {
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
                 <div class="lg:col-span-4 pr-0 lg:pr-8">
-                    <a href="/" class="inline-block mb-6"><img src="/logo-supramed-ong.png" alt="Supramed Saúde" class="h-16 w-auto brightness-0 invert opacity-95"></a>
+                    <a href="/" class="inline-block mb-6"><img loading="lazy" decoding="async" src="/logo-supramed-ong.png" alt="Supramed Saúde" class="h-16 w-auto brightness-0 invert opacity-95"></a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-8">Especialistas em saúde de alta complexidade, infraestrutura hospitalar e gestão médica estruturada para os setores público e privado.</p>
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="mailto:contato@supramed.com.br" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="E-mail" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="#" class="js-whatsapp w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="/contato/" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Contato"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                 </div>
                 <div class="lg:col-span-2 lg:col-start-6">
@@ -834,73 +788,18 @@ tailwind.config = {
             <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
                 <p class="text-xs text-gray-500 font-medium">&copy; 2026 Supramed. Todos os direitos reservados.</p>
                 <div class="flex items-center gap-6 text-xs text-gray-500 font-medium">
-                    <a href="#" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>
-                    <a href="#" class="hover:text-brand-teal transition-colors">Termos de Uso</a>
+                    <a href="/politica-privacidade/" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>
+                    <a href="/termos-de-uso/" class="hover:text-brand-teal transition-colors">Termos de Uso</a>
                     <button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300 group" aria-label="Voltar ao topo"><i class="fa-solid fa-chevron-up group-hover:-translate-y-0.5 transition-transform"></i></button>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Busca -->
-    <div id="searchModal" class="fixed inset-0 z-[110] hidden flex items-start justify-center p-4 pt-[calc(var(--header-offset)+1.5rem)] sm:pt-32">
-        <div class="absolute inset-0 bg-brand-dark/50 backdrop-blur-sm" onclick="closeSearch()"></div>
-        <div class="bg-white rounded-2xl shadow-2xl relative z-10 w-full max-w-xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300" id="searchModalContent">
-            <div class="flex items-center gap-3 px-5 py-4 border-b border-gray-100">
-                <i class="fa-solid fa-magnifying-glass text-brand-teal"></i>
-                <input
-                    type="search"
-                    id="searchInput"
-                    placeholder="Buscar seções, serviços, cases..."
-                    autocomplete="off"
-                    class="flex-1 text-base text-brand-dark placeholder:text-gray-400 outline-none bg-transparent"
-                >
-                <button type="button" onclick="closeSearch()" class="text-gray-400 hover:text-gray-700 p-1" aria-label="Fechar busca">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
-            </div>
-            <div id="searchResults" class="max-h-[min(60vh,420px)] overflow-y-auto p-2">
-                <p class="text-sm text-gray-400 px-4 py-8 text-center">Digite para buscar no site</p>
-            </div>
-            <p class="text-[11px] text-gray-400 px-5 py-3 border-t border-gray-100 bg-gray-50">
-                <kbd class="px-1.5 py-0.5 rounded bg-white border border-gray-200 text-[10px]">Esc</kbd> fechar
-                <span class="mx-2">·</span>
-                <kbd class="px-1.5 py-0.5 rounded bg-white border border-gray-200 text-[10px]">Ctrl</kbd>+<kbd class="px-1.5 py-0.5 rounded bg-white border border-gray-200 text-[10px]">K</kbd> abrir
-            </p>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="contactModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-brand-dark/60 backdrop-blur-sm" onclick="closeModal()"></div>
-        <div class="bg-white p-8 rounded-2xl shadow-2xl relative z-10 w-full max-w-md transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-brand-dark text-xl" aria-label="Fechar">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-brand-dark mb-2">Fale com um Especialista</h3>
-            <p class="text-gray-600 text-sm mb-6">Preencha os dados abaixo e entraremos em contato.</p>
-            <form id="leadForm" class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-                    <input type="text" id="nome" required class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">E-mail Institucional</label>
-                    <input type="email" id="email" required class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp</label>
-                    <input type="text" id="telefone" required maxlength="15" class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none">
-                </div>
-                <button type="submit" id="btnSubmit" class="w-full bg-brand-teal hover:bg-brand-tealHover text-white py-3 rounded-full font-bold transition mt-2">
-                    Enviar Solicitação
-                </button>
-                <div id="formMsg" class="text-sm text-center hidden mt-2"></div>
-            </form>
-        </div>
-    </div>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/whatsapp.js"></script>
+    <script src="/assets/js/analytics.js"></script>
     <script src="/assets/js/site.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -924,7 +823,7 @@ tailwind.config = {
                 if (!target) return;
                 e.preventDefault();
                 scrollToSection(id);
-                document.getElementById('mobileMenu')?.classList.add('hidden');
+                if (window.SupramedDrawer) window.SupramedDrawer.close();
             });
         });
 
@@ -977,116 +876,6 @@ tailwind.config = {
         heroCarousel?.addEventListener('mouseleave', heroResetAutoplay);
         heroResetAutoplay();
 
-        // Busca no site
-        const searchModal = document.getElementById('searchModal');
-        const searchModalContent = document.getElementById('searchModalContent');
-        const searchInput = document.getElementById('searchInput');
-        const searchResults = document.getElementById('searchResults');
-
-        const searchIndex = [
-            { id: 'home', title: 'Home', section: 'Início', text: 'Soluções completas em gestão hospitalar e saúde pública infraestrutura gestão médica' },
-            { id: 'atuacao', title: 'Nossa Atuação', section: 'Serviços', text: 'PPP parcerias público-privadas infraestrutura hospitalar gestão médica serviços não assistenciais tecnologia governança compliance' },
-            { id: 'sobre', title: 'Quem Somos', section: 'Institucional', text: 'Ecossistema inteligente humano sustentável Supramed estruturação implantação operação saúde alta complexidade' },
-            { id: 'cases-video', title: 'Case em vídeo', section: 'Cases', text: 'Segurança tecnologia cuidado integral pacientes gestão pública saúde Hospital Pinhais' },
-            { id: 'cases', title: 'Hospital de Pinhais', section: 'Cases', text: 'PPP Pinhais infraestrutura excelência 14 mil m² 90 leitos 800 empregos SUS tempo recorde' },
-            { id: 'noticias', title: 'Notícias e Artigos', section: 'Conteúdo', text: 'PPP saúde setor público Pinhais gestão hospitalar tecnologia unidades alta complexidade' },
-            { id: 'diferenciais', title: 'Diferenciais', section: 'Institucional', text: 'Governança transparente tecnologia integrada eficiência operacional experiência paciente HIS ERP' },
-            { id: 'contato', url: 'contato.html', title: 'Entre em Contato', section: 'Contato', text: 'Email telefone endereço São Paulo horário formulário mensagem empresa instituição projeto saúde' },
-            { id: 'footer', title: 'Rodapé', section: 'Navegação', text: 'São Paulo contato supramed navegação política privacidade termos' }
-        ];
-
-        main.querySelectorAll('section[id] h2, section[id] h3').forEach(el => {
-            const section = el.closest('section[id]');
-            if (!section) return;
-            const entry = searchIndex.find(i => i.id === section.id);
-            const snippet = el.textContent.trim();
-            if (entry && snippet) entry.text += ' ' + snippet;
-        });
-
-        function normalizeSearch(str) {
-            return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        }
-
-        function highlightText(text, query) {
-            if (!query) return text;
-            const re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-            return text.replace(re, '<mark class="search-hit">$1</mark>');
-        }
-
-        function renderSearchResults(query) {
-            const q = normalizeSearch(query.trim());
-            if (!q) {
-                searchResults.innerHTML = '<p class="text-sm text-gray-400 px-4 py-8 text-center">Digite para buscar no site</p>';
-                return;
-            }
-
-            const matches = searchIndex
-                .map(item => {
-                    const haystack = normalizeSearch(item.title + ' ' + item.section + ' ' + item.text);
-                    const words = q.split(/\s+/).filter(Boolean);
-                    const score = words.reduce((acc, w) => acc + (haystack.includes(w) ? 1 : 0), 0);
-                    return { ...item, score };
-                })
-                .filter(item => item.score > 0)
-                .sort((a, b) => b.score - a.score);
-
-            if (!matches.length) {
-                searchResults.innerHTML = '<p class="text-sm text-gray-500 px-4 py-8 text-center">Nenhum resultado para <strong>' + query + '</strong></p>';
-                return;
-            }
-
-            searchResults.innerHTML = matches.map(item => `
-                <button type="button" onclick="goToSearchResult('${item.id}')" class="w-full text-left px-4 py-3 rounded-xl hover:bg-brand-teal/5 transition group">
-                    <span class="text-[10px] uppercase tracking-wider text-brand-teal font-semibold">${item.section}</span>
-                    <p class="font-semibold text-brand-dark group-hover:text-brand-teal transition-colors">${highlightText(item.title, query)}</p>
-                    <p class="text-xs text-gray-500 mt-1 line-clamp-2">${highlightText(item.text.slice(0, 120), query)}…</p>
-                </button>
-            `).join('');
-        }
-
-        function openSearch() {
-            searchModal.classList.remove('hidden');
-            document.body.classList.add('modal-open');
-            setTimeout(() => {
-                searchModalContent.classList.remove('scale-95', 'opacity-0');
-                searchModalContent.classList.add('scale-100', 'opacity-100');
-                searchInput.focus();
-            }, 10);
-            renderSearchResults(searchInput.value);
-        }
-
-        function closeSearch() {
-            searchModalContent.classList.remove('scale-100', 'opacity-100');
-            searchModalContent.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => {
-                searchModal.classList.add('hidden');
-                document.body.classList.remove('modal-open');
-            }, 200);
-        }
-
-        function goToSearchResult(id) {
-            closeSearch();
-            const item = searchIndex.find(i => i.id === id);
-            if (item?.url) {
-                setTimeout(() => { window.location.href = item.url; }, 220);
-                return;
-            }
-            setTimeout(() => scrollToSection(id), 220);
-        }
-        window.openSearch = openSearch;
-        window.closeSearch = closeSearch;
-        window.goToSearchResult = goToSearchResult;
-
-        searchInput.addEventListener('input', () => renderSearchResults(searchInput.value));
-
-        document.addEventListener('keydown', (e) => {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                e.preventDefault();
-                searchModal.classList.contains('hidden') ? openSearch() : closeSearch();
-            }
-            if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) closeSearch();
-        });
-
         function toggleFaq(btn) {
             const item = btn.closest('.faq-item');
             const wasActive = item.classList.contains('active');
@@ -1094,70 +883,6 @@ tailwind.config = {
             if (!wasActive) item.classList.add('active');
         }
 
-        const modal = document.getElementById('contactModal');
-        const modalContent = document.getElementById('modalContent');
-
-        function openModal() {
-            modal.classList.remove('hidden');
-            document.body.classList.add('modal-open');
-            setTimeout(() => {
-                modalContent.classList.remove('scale-95', 'opacity-0');
-                modalContent.classList.add('scale-100', 'opacity-100');
-            }, 10);
-        }
-
-        function closeModal() {
-            modalContent.classList.remove('scale-100', 'opacity-100');
-            modalContent.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.classList.remove('modal-open');
-            }, 300);
-        }
-
-        document.getElementById('telefone').addEventListener('input', function (e) {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-        });
-
-        const urlParams = new URLSearchParams(window.location.search);
-        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(param => {
-            if (urlParams.has(param)) sessionStorage.setItem(param, urlParams.get(param));
-        });
-
-        document.getElementById('leadForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = document.getElementById('btnSubmit');
-            const msg = document.getElementById('formMsg');
-            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...';
-            btn.disabled = true;
-
-            const payload = {
-                nome: document.getElementById('nome').value,
-                email: document.getElementById('email').value,
-                telefone: document.getElementById('telefone').value,
-                utm_source: sessionStorage.getItem('utm_source') || 'organico'
-            };
-
-            fetch('https://hook.us1.make.com/YOUR_WEBHOOK_ID', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            }).then(() => {
-                msg.className = 'text-sm text-center mt-2 text-green-600';
-                msg.classList.remove('hidden');
-                msg.innerText = 'Solicitação enviada com sucesso!';
-                this.reset();
-            }).catch(() => {
-                msg.className = 'text-sm text-center mt-2 text-red-600';
-                msg.classList.remove('hidden');
-                msg.innerText = 'Erro ao enviar. Tente novamente.';
-            }).finally(() => {
-                btn.innerHTML = 'Enviar Solicitação';
-                btn.disabled = false;
-                setTimeout(closeModal, 3000);
-            });
-        });
         });
     </script>
 </body>

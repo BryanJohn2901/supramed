@@ -33,13 +33,13 @@
             return '<a href="' + item.href + '" class="' + mobileNavClass(item.id, current) + '">' + item.label + '</a>';
         }).join('');
 
-        var searchDesktop = isHome
-            ? '<button type="button" id="searchBtn" onclick="openSearch()" class="hidden md:flex text-gray-400 hover:text-brand-teal transition-colors" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>'
-            : '';
+        var menuCtaDesktop =
+            '<a href="#" class="js-whatsapp-open btn-nav-cta hidden lg:inline-flex" aria-label="Fale com um especialista">' +
+            '<span>Fale com um especialista</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>';
 
-        var searchMobile = isHome
-            ? '<button type="button" onclick="openSearch(); document.getElementById(\'mobileMenu\').classList.add(\'hidden\');" class="px-4 py-3 hover:bg-brand-teal/5 rounded-xl hover:text-brand-teal transition-colors text-left flex items-center gap-3"><i class="fa-solid fa-magnifying-glass text-brand-teal"></i> Buscar no site</button>'
-            : '';
+        var menuCtaMobile =
+            '<a href="#" class="js-whatsapp-open btn-nav-cta btn-nav-cta--mobile lg:hidden" aria-label="Fale com um especialista">' +
+            '<span>Fale com um especialista</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>';
 
         return (
             '<header id="header" class="fixed w-full top-0 z-50 transition-all duration-500">' +
@@ -54,24 +54,24 @@
                             '<span class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-teal"></i> (11) 4000-0000</span>' +
                             '<div class="w-px h-3 bg-gray-700 mx-1"></div>' +
                             '<div class="flex items-center gap-4">' +
-                                '<a href="#" class="hover:text-brand-teal transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>' +
-                                '<a href="#" class="hover:text-brand-teal transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>' +
+                                '<a href="mailto:contato@supramed.com.br" class="hover:text-brand-teal transition-colors" aria-label="E-mail" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>' +
+                                '<a href="https://wa.me/551140000000" class="hover:text-brand-teal transition-colors" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
                 '</div>' +
                 '<div class="main-nav bg-[#FFFFFF] border-b border-gray-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300">' +
                     '<div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">' +
-                        '<a href="index.html" class="flex items-center shrink-0 group" aria-label="Supramed Saúde — Home">' +
+                        '<a href="/" class="flex items-center shrink-0 group" aria-label="Supramed Saúde — Home">' +
                             '<img src="/logo-supramed-ong.png" alt="Supramed Saúde" width="260" height="60" class="h-12 sm:h-14 w-auto max-w-[260px] object-contain object-left transition-opacity duration-300 group-hover:opacity-90">' +
                         '</a>' +
                         '<nav class="hidden lg:flex items-center gap-2 text-[15px] font-medium text-gray-600 font-sans">' + desktopNav + '</nav>' +
-                        '<div class="flex items-center gap-5">' + searchDesktop +
+                        '<div class="flex items-center gap-3 lg:gap-4">' + menuCtaDesktop +
                             '<button type="button" id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-brand-dark border border-gray-200 rounded-full hover:bg-gray-50 transition" aria-label="Menu"><i class="fa-solid fa-bars-staggered"></i></button>' +
                         '</div>' +
                     '</div>' +
-                    '<nav id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-[#FFFFFF] px-6 py-6 flex flex-col gap-2 text-base font-medium text-gray-600 absolute w-full shadow-[0_20px_40px_rgba(0,0,0,0.08)]">' +
-                        searchMobile + mobileNav +
+                    '<nav id="mobileMenu" class="lg:hidden" aria-label="Menu mobile">' +
+                        menuCtaMobile + mobileNav +
                     '</nav>' +
                 '</div>' +
             '</header>'
@@ -97,12 +97,12 @@
                 '<div class="container mx-auto px-6">' +
                     '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">' +
                         '<div class="lg:col-span-4 pr-0 lg:pr-8">' +
-                            '<a href="index.html" class="inline-block mb-6"><img src="/logo-supramed-ong.png" alt="Supramed Saúde" class="h-12 w-auto brightness-0 invert opacity-95"></a>' +
+                            '<a href="/" class="inline-block mb-6"><img src="/logo-supramed-ong.png" alt="Supramed Saúde" class="h-12 w-auto brightness-0 invert opacity-95"></a>' +
                             '<p class="text-gray-400 text-sm leading-relaxed mb-8">Especialistas em saúde de alta complexidade, infraestrutura hospitalar e gestão médica estruturada para os setores público e privado.</p>' +
                             '<div class="flex gap-3">' +
-                                '<a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>' +
-                                '<a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>' +
-                                '<a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>' +
+                                '<a href="mailto:contato@supramed.com.br" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="E-mail" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>' +
+                                '<a href="https://wa.me/551140000000" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
+                                '<a href="/contato/" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Contato"><i class="fa-brands fa-facebook-f"></i></a>' +
                             '</div>' +
                         '</div>' +
                         '<div class="lg:col-span-2 lg:col-start-6">' +
@@ -131,8 +131,8 @@
                     '<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">' +
                         '<p class="text-xs text-gray-500 font-medium">&copy; 2026 Supramed. Todos os direitos reservados.</p>' +
                         '<div class="flex items-center gap-6 text-xs text-gray-500 font-medium">' +
-                            '<a href="#" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>' +
-                            '<a href="#" class="hover:text-brand-teal transition-colors">Termos de Uso</a>' +
+                            '<a href="/politica-privacidade/" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>' +
+                            '<a href="/termos-de-uso/" class="hover:text-brand-teal transition-colors">Termos de Uso</a>' +
                             '<button type="button" onclick="window.scrollTo({top:0,behavior:\'smooth\'})" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300 group" aria-label="Voltar ao topo"><i class="fa-solid fa-chevron-up group-hover:-translate-y-0.5 transition-transform"></i></button>' +
                         '</div>' +
                     '</div>' +

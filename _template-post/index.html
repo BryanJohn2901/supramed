@@ -75,8 +75,8 @@ tailwind.config = {
                     <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-teal"></i> (11) 4000-0000</span>
                     <div class="w-px h-3 bg-gray-700 mx-1"></div>
                     <div class="flex items-center gap-4">
-                        <a href="#" class="hover:text-brand-teal transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="hover:text-brand-teal transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:contato@supramed.com.br" class="hover:text-brand-teal transition-colors" aria-label="E-mail" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="#" class="js-whatsapp hover:text-brand-teal transition-colors" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -94,12 +94,12 @@ tailwind.config = {
                     <a href="/blog/" class="nav-link-active px-5 py-2.5 rounded-full transition-all duration-300">Blog</a>
                     <a href="/contato/" class="px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Contato</a>
                 </nav>
-                <div class="flex items-center gap-5">
+                <div class="flex items-center gap-3 lg:gap-4">
+                    <a href="#" class="js-whatsapp-open btn-nav-cta hidden lg:inline-flex" aria-label="Fale com um especialista"><span>Fale com um especialista</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
                     <button type="button" id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-brand-dark border border-gray-200 rounded-full hover:bg-gray-50 transition" aria-label="Menu"><i class="fa-solid fa-bars-staggered"></i></button>
                 </div>
             </div>
-            <nav id="mobileMenu" class="hidden lg:hidden border-t border-gray-100/50 bg-white/95 backdrop-blur-2xl px-6 py-6 flex flex-col gap-2 text-base font-medium text-gray-600 absolute w-full shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
-                <a href="/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Home</a>
+            <nav id="mobileMenu" class="lg:hidden" aria-label="Menu mobile"><a href="#" class="js-whatsapp-open btn-nav-cta btn-nav-cta--mobile lg:hidden" aria-label="Fale com um especialista"><span>Fale com um especialista</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a><a href="/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Home</a>
                 <a href="/nossas-atuacoes/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Nossa Atuação</a>
                 <a href="/quem-somos/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a>
                 <a href="/cases/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Cases</a>
@@ -146,8 +146,8 @@ tailwind.config = {
                         <span class="inline-block bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">{{CATEGORIA}}</span>
                         <div class="flex items-center gap-2">
                             <span class="text-sm text-gray-400">Compartilhar:</span>
-                            <a href="#" class="w-8 h-8 rounded-lg bg-gray-100 hover:bg-brand-teal hover:text-white flex items-center justify-center text-gray-500 transition-all" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
-                            <a href="#" class="w-8 h-8 rounded-lg bg-gray-100 hover:bg-green-500 hover:text-white flex items-center justify-center text-gray-500 transition-all" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://supramed.com.br/blog/{{SLUG}}/" class="w-8 h-8 rounded-lg bg-gray-100 hover:bg-brand-teal hover:text-white flex items-center justify-center text-gray-500 transition-all" rel="noopener noreferrer" target="_blank" aria-label="Compartilhar no LinkedIn"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+                            <a href="https://wa.me/?text=https%3A%2F%2Fsupramed.com.br%2Fblog%2F{{SLUG}}%2F" class="w-8 h-8 rounded-lg bg-gray-100 hover:bg-green-500 hover:text-white flex items-center justify-center text-gray-500 transition-all" rel="noopener noreferrer" target="_blank" aria-label="Compartilhar no WhatsApp"><i class="fa-brands fa-whatsapp text-xs"></i></a>
                         </div>
                     </div>
 
@@ -222,7 +222,7 @@ tailwind.config = {
             <div class="container mx-auto px-6" data-aos="zoom-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Quer saber como a Supramed pode ajudar?</h2>
                 <p class="text-palette-100 mb-8 max-w-xl mx-auto">Nossos especialistas estão prontos para discutir seu projeto de saúde.</p>
-                <a href="/contato/" class="btn-primary">Fale Conosco <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn-whatsapp js-whatsapp">Fale Conosco <i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </section>
     </main>
@@ -235,9 +235,9 @@ tailwind.config = {
                     <a href="/" class="inline-block mb-6"><img src="/logo-supramed-ong.png" alt="Supramed Saúde" class="h-16 w-auto brightness-0 invert opacity-95"></a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-8">Especialistas em saúde de alta complexidade, infraestrutura hospitalar e gestão médica estruturada para os setores público e privado.</p>
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="mailto:contato@supramed.com.br" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="E-mail" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="#" class="js-whatsapp w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="/contato/" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Contato"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                 </div>
                 <div class="lg:col-span-2 lg:col-start-6">
@@ -273,8 +273,8 @@ tailwind.config = {
             <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
                 <p class="text-xs text-gray-500 font-medium">&copy; 2026 Supramed. Todos os direitos reservados.</p>
                 <div class="flex items-center gap-6 text-xs text-gray-500 font-medium">
-                    <a href="#" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>
-                    <a href="#" class="hover:text-brand-teal transition-colors">Termos de Uso</a>
+                    <a href="/politica-privacidade/" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>
+                    <a href="/termos-de-uso/" class="hover:text-brand-teal transition-colors">Termos de Uso</a>
                     <button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300 group" aria-label="Voltar ao topo"><i class="fa-solid fa-chevron-up group-hover:-translate-y-0.5 transition-transform"></i></button>
                 </div>
             </div>
