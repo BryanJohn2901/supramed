@@ -10,7 +10,7 @@ Edite **`/assets/js/config.js`** e preencha os campos vazios. Depois publique o 
 
 | # | O que fazer | Onde |
 |---|-------------|------|
-| 1 | **Telefone real** (hoje fictício `(11) 4000-0000`) | `assets/js/config.js` → `phoneDisplay` e `phoneTel` + buscar/substituir no site se mudar o número |
+| 1 | **Telefone** (ainda não definido — oculto no site) | `assets/js/config.js` → `phoneDisplay` e `phoneTel` quando o cliente enviar |
 | 2 | **Google Tag Manager** (ID real) | `config.js` → `gtmId` |
 | 4 | **Google Search Console** — verificar domínio e enviar sitemap | https://search.google.com/search-console |
 | 5 | **Deploy** com HTTPS e redirect `www` ↔ domínio canônico | Vercel/Netlify/servidor |
@@ -71,7 +71,7 @@ window.SUPRAMED_CONFIG = {
     whatsappNumber: '5511999999999',  // DDI 55 + DDD + número
     phoneDisplay: '(11) 99999-9999',
     phoneTel: '+5511999999999',
-    contactEmail: 'contato@supramed.com.br',
+    contactEmail: 'contato@supramedsaude.com.br',
     siteUrl: 'https://supramed.com.br'
 };
 ```
