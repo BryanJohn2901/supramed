@@ -1,5 +1,9 @@
 {
   "trailingSlash": true,
+  "redirects": [
+    { "source": "/contato", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/contato/", "destination": "/fale-conosco/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

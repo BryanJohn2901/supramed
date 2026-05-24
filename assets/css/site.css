@@ -25,6 +25,10 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--header-offset);
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
 }
 section[id] {
     scroll-margin-top: var(--header-offset);
@@ -161,6 +165,177 @@ body.drawer-open {
 .mobile-drawer__body .btn-nav-cta--mobile {
     margin-bottom: 0.5rem;
     flex-shrink: 0;
+}
+
+/* Faixa de números (apresentação institucional) */
+.stats-band {
+    background: linear-gradient(135deg, #0A0F1C 0%, #0F766E 100%);
+    color: #fff;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.stats-band__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1rem;
+}
+@media (min-width: 640px) {
+    .stats-band__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .stats-band__grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+    }
+}
+.stats-band__item {
+    text-align: center;
+    padding: 0.5rem;
+}
+.stats-band__value {
+    display: block;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #5EEAD4;
+    letter-spacing: -0.02em;
+}
+.stats-band__label {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.35;
+}
+@media (min-width: 640px) {
+    .stats-band__label {
+        font-size: 0.72rem;
+    }
+}
+
+/* Etapas — como atuamos */
+.method-steps {
+    display: grid;
+    gap: 1.25rem;
+}
+@media (min-width: 768px) {
+    .method-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .method-steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.method-step {
+    position: relative;
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem 1.25rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.method-step:hover {
+    border-color: rgba(13, 148, 136, 0.35);
+    box-shadow: 0 12px 32px rgba(13, 148, 136, 0.08);
+}
+.method-step__num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(13, 148, 136, 0.15);
+    margin-bottom: 0.5rem;
+}
+.method-step__title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0A0F1C;
+    margin-bottom: 0.5rem;
+}
+.method-step__text {
+    font-size: 0.875rem;
+    color: #64748B;
+    line-height: 1.55;
+}
+
+/* Indicadores de performance */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+@media (min-width: 768px) {
+    .kpi-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .kpi-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.kpi-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+.kpi-chip i {
+    color: #5EEAD4;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* Depoimento */
+.testimonial-card {
+    position: relative;
+    padding: 2rem 2rem 2rem 2.5rem;
+    background: #F8FAFC;
+    border-radius: 1.25rem;
+    border-left: 4px solid #0D9488;
+}
+.testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    font-family: Georgia, serif;
+    color: rgba(13, 148, 136, 0.2);
+}
+.testimonial-card__text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #334155;
+    font-style: italic;
+}
+.testimonial-card__author {
+    margin-top: 1.25rem;
+    font-weight: 700;
+    color: #0A0F1C;
+    font-size: 0.95rem;
+}
+.testimonial-card__role {
+    font-size: 0.8rem;
+    color: #64748B;
+    font-weight: 500;
 }
 
 /* Header responsivo */

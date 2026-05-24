@@ -4,7 +4,7 @@
         { id: 'atuacao', href: '/nossas-atuacoes/', label: 'Nossa Atuação' },
         { id: 'quem-somos', href: '/quem-somos/', label: 'Quem Somos' },
         { id: 'cases', href: '/cases/', label: 'Cases' },
-        { id: 'contato', href: '/contato/', label: 'Contato' }
+        { id: 'fale-conosco', href: '/fale-conosco/', label: 'Fale Conosco' }
     ];
 
     function navClass(id, current) {
@@ -102,7 +102,7 @@
                             '<div class="flex gap-3">' +
                                 '<a href="mailto:contato@supramed.com.br" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="E-mail" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>' +
                                 '<a href="https://wa.me/551140000000" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
-                                '<a href="/contato/" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Contato"><i class="fa-brands fa-facebook-f"></i></a>' +
+                                '<a href="/fale-conosco/" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Contato"><i class="fa-brands fa-facebook-f"></i></a>' +
                             '</div>' +
                         '</div>' +
                         '<div class="lg:col-span-2 lg:col-start-6">' +
@@ -120,7 +120,7 @@
                             '</ul>' +
                         '</div>' +
                         '<div class="lg:col-span-2">' +
-                            '<h4 class="font-bold text-lg text-white mb-6 tracking-wide">Contato</h4>' +
+                            '<h4 class="font-bold text-lg text-white mb-6 tracking-wide">Fale Conosco</h4>' +
                             '<ul class="space-y-4 text-sm text-gray-400">' +
                                 '<li class="flex gap-3 items-start"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 mt-0.5 text-brand-teal"><i class="fa-solid fa-location-dot text-xs"></i></div><span class="leading-relaxed">São Paulo, SP<br>Brasil</span></li>' +
                                 '<li><a href="tel:+551140000000" class="flex gap-3 items-center hover:text-white transition-colors group"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-colors"><i class="fa-solid fa-phone text-xs"></i></div>(11) 4000-0000</a></li>' +

@@ -18,6 +18,7 @@ window.SUPRAMED_CONFIG = {
         default: 'Olá! Vim pelo site da Supramed e gostaria de mais informações.',
         home: 'Olá! Vim pela página inicial da Supramed e quero saber sobre gestão hospitalar e PPPs em saúde.',
         contato: 'Olá! Quero falar com a equipe da Supramed sobre um projeto de saúde.',
+        'fale-conosco': 'Olá! Quero falar com a equipe da Supramed sobre um projeto de saúde.',
         'quem-somos': 'Olá! Conheci a Supramed em Quem Somos e quero entender como vocês atuam em gestão hospitalar integrada.',
         'nossas-atuacoes': 'Olá! Vi a área Nossa Atuação e quero saber qual solução da Supramed se encaixa no meu projeto.',
         cases: 'Olá! Vi o case do Hospital de Pinhais e gostaria de conversar sobre um projeto semelhante.',

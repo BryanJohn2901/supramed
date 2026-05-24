@@ -66,12 +66,6 @@
             '  <div class="whatsapp-panel__header">' +
             '    <div class="whatsapp-panel__header-glow" aria-hidden="true"></div>' +
             '    <div class="whatsapp-panel__brand">' +
-            '      <span class="whatsapp-panel__avatar">' +
-            '        <img src="' +
-            escapeHtml(logo) +
-            '" alt="" width="40" height="40" loading="lazy" decoding="async" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
-            '        <span class="whatsapp-panel__avatar-fallback" aria-hidden="true"><i class="fa-solid fa-hospital"></i></span>' +
-            '      </span>' +
             '      <div class="whatsapp-panel__meta">' +
             '        <p id="whatsapp-panel-title" class="whatsapp-panel__title">' +
             escapeHtml(title) +
