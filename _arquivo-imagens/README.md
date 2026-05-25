@@ -28,5 +28,6 @@ problemas de contexto. Mantidas aqui para referência caso sejam regeradas
 sem texto/marcas de terceiros:
 
 - `hero-exterior.jpg` — letreiro "Hospital Albert Einstein — Unidade Perdizes"
+- `hospital-facade.jpg` — letreiro "Centro de Referência à Saúde da Mulher"
 - `operating-context.jpg` — médica + gestante (genérica, mas não usada)
 - `team-hallway.jpg` — médica em corredor (genérica, mas não usada)
