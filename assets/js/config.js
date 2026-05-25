@@ -16,7 +16,6 @@ window.SUPRAMED_CONFIG = {
     whatsappWidgetGreeting: 'Olá! Conte sobre seu projeto de saúde, PPP ou gestão hospitalar — respondemos pelo WhatsApp.',
     whatsappWidgetLogo: '/logo.jpeg',
     caseHospitalName: 'Hospital e Maternidade Municipal de Pinhais Papa Francisco',
-    caseHospitalUrl: 'https://hmpapafrancisco.com.br/',
     /** Mensagens por página (data-page no <body>) */
     whatsappMessages: {
         default: 'Olá! Vim pelo site da Supramed e gostaria de mais informações.',
