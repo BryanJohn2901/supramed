@@ -121,7 +121,7 @@
                         '<div class="lg:col-span-2">' +
                             '<h4 class="font-bold text-lg text-white mb-6 tracking-wide">Fale Conosco</h4>' +
                             '<ul class="space-y-4 text-sm text-gray-400">' +
-                                '<li class="flex gap-3 items-start"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 mt-0.5 text-brand-teal"><i class="fa-solid fa-location-dot text-xs"></i></div><span class="leading-relaxed">Curitiba, PR<br>Brasil</span></li>' +
+                                '<li class="flex gap-3 items-start"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 mt-0.5 text-brand-teal"><i class="fa-solid fa-location-dot text-xs"></i></div><span class="leading-relaxed">Rua N. Sra. da Boa Esperança, 244<br>Curitiba, PR</span></li>' +
                                 '<li><a href="mailto:contato@supramedsaude.com.br" class="flex gap-3 items-center hover:text-white transition-colors group"><div class="w-6 h-6 rounded bg-brand-teal/10 flex items-center justify-center shrink-0 text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-colors"><i class="fa-regular fa-envelope text-xs"></i></div>contato@supramedsaude.com.br</a></li>' +
                             '</ul>' +
                         '</div>' +

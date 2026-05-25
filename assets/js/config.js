@@ -8,7 +8,7 @@ window.SUPRAMED_CONFIG = {
     phoneDisplay: '(41) 3166-3610',
     phoneTel: '+554131663610',
     contactEmail: 'contato@supramedsaude.com.br',
-    addressDisplay: 'Curitiba, PR',
+    addressDisplay: 'Rua Nossa Senhora da Boa Esperança, 244 — Curitiba, PR',
     siteUrl: 'https://supramed.com.br',
     whatsappLabel: 'Fale Conosco',
     whatsappWidgetTitle: 'Supramed',
