@@ -10,6 +10,8 @@ _template-post/
 _arquivo-imagens/
 _redirects
 
+dist/
+
 novo-post.sh
 PENDENCIAS-PRE-LANCAMENTO.md
 README.md

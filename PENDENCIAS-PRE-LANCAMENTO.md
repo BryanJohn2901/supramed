@@ -30,15 +30,28 @@ Edite **`/assets/js/config.js`** e preencha os campos vazios. Depois publique o 
 
 ---
 
-## 3. Performance (após mudar classes Tailwind)
+## 3. Build do site
 
-O site já usa **`/assets/css/tailwind-built.css`** (build local). Se alterar HTML/classes:
+O site agora tem um build que organiza os arquivos em `dist/`:
 
 ```bash
-npm run build:css
+npm run build       # roda tailwind + build.sh -> gera dist/
+npm run start       # serve dist/ em http://localhost:4173
 ```
 
-Commitar o CSS gerado junto com as alterações.
+Estrutura de saída:
+
+```
+dist/
+├── css/      (site.css + tailwind-built.css)
+├── js/       (config, layout, whatsapp, analytics, ...)
+├── assets/   (imagens, preservando hospital-site/)
+└── *.html    (paginas com paths reescritos para /css/, /js/, /assets/)
+```
+
+A Vercel roda `npm run build` automaticamente e publica a pasta `dist/`
+(configurado em `vercel.json`). A pasta `dist/` está no `.gitignore` —
+**nunca commitar**. Para builds locais: `npm run build`.
 
 ---
 
