@@ -3,11 +3,10 @@
  */
 window.SUPRAMED_CONFIG = {
     gtmId: '',
-    /** Apenas dígitos com DDI 55, ex: 5511999999999 */
-    whatsappNumber: '551140000000',
-    /** Vazio = telefone não exibido no site */
-    phoneDisplay: '',
-    phoneTel: '',
+    /** Apenas dígitos com DDI 55, ex: 5541316636XX */
+    whatsappNumber: '554131663610',
+    phoneDisplay: '(41) 3166-3610',
+    phoneTel: '+554131663610',
     contactEmail: 'contato@supramedsaude.com.br',
     addressDisplay: 'Curitiba, PR',
     siteUrl: 'https://supramed.com.br',
@@ -18,21 +17,21 @@ window.SUPRAMED_CONFIG = {
     caseHospitalName: 'Hospital e Maternidade Municipal de Pinhais Papa Francisco',
     /** Mensagens por página (data-page no <body>) */
     whatsappMessages: {
-        default: 'Olá! Vim pelo site da Supramed e gostaria de mais informações.',
-        home: 'Olá! Vim pela página inicial da Supramed e quero saber sobre gestão hospitalar e PPPs em saúde.',
-        contato: 'Olá! Quero falar com a equipe da Supramed sobre um projeto de saúde.',
-        'fale-conosco': 'Olá! Quero falar com a equipe da Supramed sobre um projeto de saúde.',
-        'quem-somos': 'Olá! Conheci a Supramed em Quem Somos e quero entender como vocês atuam em gestão hospitalar integrada.',
-        'nossas-atuacoes': 'Olá! Vi a área Nossa Atuação e quero saber qual solução da Supramed se encaixa no meu projeto.',
-        cases: 'Olá! Vi o case do Hospital Papa Francisco (Pinhais) e gostaria de conversar sobre um projeto semelhante.',
-        blog: 'Olá! Estava lendo o blog da Supramed e quero falar com um especialista.',
-        'blog-ppp-saude': 'Olá! Li o artigo sobre PPP de saúde e quero estruturar um projeto com a Supramed.',
-        'blog-hospital-pinhais': 'Olá! Li o case do Hospital Papa Francisco (Pinhais) e quero saber como a Supramed pode apoiar minha cidade.',
-        'blog-gestao-equipes': 'Olá! Li o artigo sobre gestão de equipes em saúde pública e quero conversar com a Supramed.',
-        'blog-governanca': 'Olá! Li o artigo sobre governança em PPP hospitalar e quero mais informações.',
-        'blog-tecnologia-integrada': 'Olá! Li o artigo sobre tecnologia na gestão hospitalar e quero falar com a Supramed.',
-        'blog-humanizacao': 'Olá! Li o artigo sobre humanização hospitalar e quero conhecer as soluções da Supramed.',
-        'blog-engenharia-clinica': 'Olá! Li o artigo sobre engenharia clínica e quero saber como a Supramed atua nessa área.',
-        feira: 'Olá! Vi a notícia da PPP do Hospital Municipal de Feira de Santana e quero conversar com a Supramed.'
+        default: 'Olá, Supramed! Cheguei pelo site e gostaria de mais informações.',
+        home: 'Olá, Supramed! Cheguei pelo site e quero saber mais sobre gestão hospitalar e PPPs em saúde.',
+        contato: 'Olá, Supramed! Quero falar com a equipe sobre um projeto de saúde.',
+        'fale-conosco': 'Olá, Supramed! Vim pela página Fale Conosco e quero conversar com um especialista.',
+        'quem-somos': 'Olá, Supramed! Conheci a empresa pela página Quem Somos e quero entender como atuam em gestão hospitalar integrada.',
+        'nossas-atuacoes': 'Olá, Supramed! Vi a página Nossa Atuação (PPPs, infraestrutura, facilities, gestão médica) e quero saber qual solução se encaixa no meu projeto.',
+        cases: 'Olá, Supramed! Vi o case do Hospital Papa Francisco em Pinhais e gostaria de conversar sobre um projeto semelhante no meu município.',
+        blog: 'Olá, Supramed! Estava lendo o blog e quero falar com um especialista.',
+        'blog-ppp-saude': 'Olá, Supramed! Li o artigo "Como estruturar uma PPP de saúde" e quero estruturar um projeto.',
+        'blog-hospital-pinhais': 'Olá, Supramed! Li o case do Hospital Papa Francisco (Pinhais) e quero saber como vocês podem apoiar minha cidade.',
+        'blog-gestao-equipes': 'Olá, Supramed! Li o artigo sobre gestão de equipes em saúde pública e quero conversar.',
+        'blog-governanca': 'Olá, Supramed! Li o artigo sobre governança em PPP hospitalar e quero mais informações.',
+        'blog-tecnologia-integrada': 'Olá, Supramed! Li o artigo sobre tecnologia na gestão hospitalar e quero falar com a equipe.',
+        'blog-humanizacao': 'Olá, Supramed! Li o artigo sobre humanização hospitalar e quero conhecer as soluções de vocês.',
+        'blog-engenharia-clinica': 'Olá, Supramed! Li o artigo sobre engenharia clínica e quero saber como vocês atuam nessa área.',
+        feira: 'Olá, Supramed! Vi a notícia da PPP do Hospital Municipal de Feira de Santana e quero conversar com a equipe.'
     }
 };

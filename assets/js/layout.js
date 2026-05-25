@@ -54,7 +54,7 @@
                             '<div class="w-px h-3 bg-gray-700 mx-1"></div>' +
                             '<div class="flex items-center gap-4">' +
                                 '<a href="mailto:contato@supramedsaude.com.br" class="hover:text-brand-teal transition-colors" aria-label="E-mail" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>' +
-                                '<a href="https://wa.me/551140000000" class="hover:text-brand-teal transition-colors" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
+                                '<a href="https://wa.me/554131663610" class="hover:text-brand-teal transition-colors" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
@@ -100,7 +100,7 @@
                             '<p class="text-gray-400 text-sm leading-relaxed mb-8">Especialistas em saúde de alta complexidade, infraestrutura hospitalar e gestão médica estruturada para os setores público e privado.</p>' +
                             '<div class="flex gap-3">' +
                                 '<a href="mailto:contato@supramedsaude.com.br" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="E-mail" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>' +
-                                '<a href="https://wa.me/551140000000" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
+                                '<a href="https://wa.me/554131663610" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
                                 '<a href="/fale-conosco/" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-teal hover:border-brand-teal transition-all duration-300" aria-label="Contato"><i class="fa-brands fa-facebook-f"></i></a>' +
                             '</div>' +
                         '</div>' +

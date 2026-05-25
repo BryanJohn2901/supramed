@@ -4,7 +4,7 @@
     }
 
     function getNumber() {
-        return String(getConfig().whatsappNumber || '551140000000').replace(/\D/g, '');
+        return String(getConfig().whatsappNumber || '554131663610').replace(/\D/g, '');
     }
 
     function getPageId() {
