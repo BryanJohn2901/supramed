@@ -1,0 +1,81 @@
+# Supramed — Apache config para hospedagem estática (Hostinger)
+# Arraste o CONTEÚDO de dist/ para o public_html/ da Hostinger.
+# Atenção: este arquivo começa com "." — ative "mostrar arquivos ocultos"
+# no gerenciador de arquivos antes de fazer upload.
+
+Options -Indexes
+DirectoryIndex index.html
+
+# ─── HTTPS obrigatório ────────────────────────────────────────────────────────
+# Passo: Hostinger → SSL → "Ativar SSL grátis" → aguardar propagação → descomentar:
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# ─── Redirects (equivalente ao vercel.json) ───────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^contato/?$    /fale-conosco/ [L,R=301]
+  RewriteRule ^contato\.html$ /fale-conosco/ [L,R=301]
+  RewriteRule ^home/?$       /              [L,R=301]
+  RewriteRule ^index\.html$  /              [L,R=301]
+</IfModule>
+
+# ─── Página 404 personalizada ─────────────────────────────────────────────────
+ErrorDocument 404 /404.html
+
+# ─── Compressão gzip ──────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE \
+    text/html text/css text/javascript \
+    application/javascript application/json \
+    text/xml application/xml image/svg+xml
+</IfModule>
+
+# ─── Cache headers ────────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # CSS e JS — 1 ano imutável
+  <FilesMatch "\.(css|js)$">
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Imagens e fontes — 30 dias
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|gif|ico|avif|woff|woff2|ttf|otf)$">
+    ExpiresDefault "access plus 30 days"
+    Header set Cache-Control "public, max-age=2592000, stale-while-revalidate=86400"
+  </FilesMatch>
+
+  # HTML — sempre fresco (CDN/proxy revalida)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # sitemap e robots — 1 hora
+  <FilesMatch "(sitemap\.xml|robots\.txt)$">
+    ExpiresDefault "access plus 1 hour"
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+# ─── Headers de segurança ─────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options    "nosniff"
+  Header always set X-Frame-Options           "SAMEORIGIN"
+  Header always set Referrer-Policy           "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy        "geolocation=(), camera=(), microphone=(), payment=()"
+  # HSTS — só ative DEPOIS de confirmar que HTTPS redirect acima funciona
+  # Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+</IfModule>
+
+# ─── MIME types ───────────────────────────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType image/svg+xml        .svg
+  AddType image/webp           .webp
+  AddType application/font-woff2 .woff2
+  AddType application/font-woff  .woff
+</IfModule>

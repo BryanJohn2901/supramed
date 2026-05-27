@@ -2,12 +2,15 @@
   "name": "supramed-site",
   "private": true,
   "scripts": {
-    "build": "bash build.sh",
+    "build": "node build.js",
     "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind-built.css --minify",
-    "prebuild": "npm run build:css",
     "start": "npx --yes serve dist -l 4173"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.17",
+    "terser": "^5.48.0"
   }
 }

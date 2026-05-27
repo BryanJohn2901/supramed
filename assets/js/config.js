@@ -9,7 +9,7 @@ window.SUPRAMED_CONFIG = {
     phoneTel: '+554131663610',
     contactEmail: 'contato@supramedsaude.com.br',
     addressDisplay: 'Rua Nossa Senhora da Boa Esperança, 244 — Curitiba, PR',
-    siteUrl: 'https://supramed.com.br',
+    siteUrl: 'https://supramedsaude.com.br',
     whatsappLabel: 'Fale Conosco',
     whatsappWidgetTitle: 'Supramed',
     whatsappWidgetGreeting: 'Olá! Conte sobre seu projeto de saúde, PPP ou gestão hospitalar — respondemos pelo WhatsApp.',

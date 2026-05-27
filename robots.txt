@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://supramed.com.br/sitemap.xml
+Sitemap: https://supramedsaude.com.br/sitemap.xml

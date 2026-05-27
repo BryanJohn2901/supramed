@@ -85,7 +85,7 @@ window.SUPRAMED_CONFIG = {
     phoneDisplay: '(11) 99999-9999',
     phoneTel: '+5511999999999',
     contactEmail: 'contato@supramedsaude.com.br',
-    siteUrl: 'https://supramed.com.br'
+    siteUrl: 'https://supramedsaude.com.br'
 };
 ```
 
@@ -93,6 +93,6 @@ window.SUPRAMED_CONFIG = {
 
 ## 6. Contato técnico pós-deploy
 
-- Sitemap: https://supramed.com.br/sitemap.xml  
-- Robots: https://supramed.com.br/robots.txt  
+- Sitemap: https://supramedsaude.com.br/sitemap.xml  
+- Robots: https://supramedsaude.com.br/robots.txt  
 - Teste rich results: https://search.google.com/test/rich-results  

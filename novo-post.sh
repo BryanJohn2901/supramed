@@ -48,7 +48,7 @@ sed \
 
 # Adiciona entrada no sitemap.xml
 SITEMAP="$ROOT/sitemap.xml"
-NEW_URL="  <url>\n    <loc>https://supramed.com.br/blog/$SLUG/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>"
+NEW_URL="  <url>\n    <loc>https://supramedsaude.com.br/blog/$SLUG/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>"
 sed -i "s|</urlset>|$NEW_URL\n</urlset>|" "$SITEMAP"
 
 echo ""

@@ -40,7 +40,7 @@ for entry in \
     index.html 404.html \
     favicon.svg logo.jpeg logo-supramed-ong.png og-image.jpg \
     robots.txt sitemap.xml \
-    blog cases quem-somos nossas-atuacoes fale-conosco \
+    blog cases quem-somos nossas-atuacoes fale-conosco contato \
     politica-privacidade termos-de-uso; do
     if [ -e "$ROOT/$entry" ]; then
         cp -r "$ROOT/$entry" "$DIST/"
