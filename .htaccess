@@ -1,10 +1,10 @@
 # Supramed — Apache config para hospedagem estática (Hostinger)
 # Arraste o CONTEÚDO de dist/ para o public_html/ da Hostinger.
-# Atenção: este arquivo começa com "." — ative "mostrar arquivos ocultos"
-# no gerenciador de arquivos antes de fazer upload.
+# Cache: CSS/JS 1 ano (immutable + ?v= no build) | imagens 30 dias | HTML sempre revalida
 
 Options -Indexes
 DirectoryIndex index.html
+FileETag MTime Size
 
 # ─── HTTPS obrigatório ────────────────────────────────────────────────────────
 # Passo: Hostinger → SSL → "Ativar SSL grátis" → aguardar propagação → descomentar:
@@ -17,6 +17,8 @@ DirectoryIndex index.html
 # ─── Redirects (equivalente ao vercel.json) ───────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.supramedsaude\.com\.br$ [NC]
+  RewriteRule ^ https://supramedsaude.com.br%{REQUEST_URI} [L,R=301]
   RewriteRule ^contato/?$    /fale-conosco/ [L,R=301]
   RewriteRule ^contato\.html$ /fale-conosco/ [L,R=301]
   RewriteRule ^home/?$       /              [L,R=301]
@@ -26,40 +28,56 @@ DirectoryIndex index.html
 # ─── Página 404 personalizada ─────────────────────────────────────────────────
 ErrorDocument 404 /404.html
 
-# ─── Compressão gzip ──────────────────────────────────────────────────────────
+# ─── Compressão gzip / brotli (quando disponível) ─────────────────────────────
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE \
-    text/html text/css text/javascript \
-    application/javascript application/json \
-    text/xml application/xml image/svg+xml
+    text/html text/css text/javascript text/plain text/xml \
+    application/javascript application/json application/xml \
+    image/svg+xml
 </IfModule>
 
-# ─── Cache headers ────────────────────────────────────────────────────────────
-<IfModule mod_expires.c>
-  ExpiresActive On
-
-  # CSS e JS — 1 ano imutável
+# ─── Cache-Control (equivalente ao vercel.json) ───────────────────────────────
+<IfModule mod_headers.c>
+  # CSS e JS — 1 ano; cache bust via ?v=BUILD_ID no HTML gerado pelo build
   <FilesMatch "\.(css|js)$">
-    ExpiresDefault "access plus 1 year"
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 
-  # Imagens e fontes — 30 dias
-  <FilesMatch "\.(jpg|jpeg|png|webp|svg|gif|ico|avif|woff|woff2|ttf|otf)$">
-    ExpiresDefault "access plus 30 days"
+  # Imagens, fontes, PDF — 30 dias + revalidação em background
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|gif|ico|avif|woff|woff2|ttf|otf|pdf)$">
     Header set Cache-Control "public, max-age=2592000, stale-while-revalidate=86400"
   </FilesMatch>
 
-  # HTML — sempre fresco (CDN/proxy revalida)
+  # HTML — conteúdo dinâmico; sempre buscar versão nova após deploy
   <FilesMatch "\.html$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
 
   # sitemap e robots — 1 hora
-  <FilesMatch "(sitemap\.xml|robots\.txt)$">
-    ExpiresDefault "access plus 1 hour"
-    Header set Cache-Control "public, max-age=3600"
+  <FilesMatch "(^sitemap\.xml$|^robots\.txt$)">
+    Header set Cache-Control "public, max-age=3600, stale-while-revalidate=600"
   </FilesMatch>
+
+  # meta do build — nunca cachear (consulta de versão deployada)
+  <FilesMatch "(^build-meta\.json$|^build-id\.txt$)">
+    Header set Cache-Control "no-store"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                              "access plus 1 year"
+  ExpiresByType application/javascript                "access plus 1 year"
+  ExpiresByType image/jpeg                            "access plus 30 days"
+  ExpiresByType image/png                             "access plus 30 days"
+  ExpiresByType image/webp                            "access plus 30 days"
+  ExpiresByType image/svg+xml                         "access plus 30 days"
+  ExpiresByType image/gif                             "access plus 30 days"
+  ExpiresByType image/x-icon                          "access plus 30 days"
+  ExpiresByType application/pdf                       "access plus 30 days"
+  ExpiresByType text/html                             "access plus 0 seconds"
+  ExpiresByType application/xml                       "access plus 1 hour"
+  ExpiresByType text/plain                            "access plus 1 hour"
 </IfModule>
 
 # ─── Headers de segurança ─────────────────────────────────────────────────────
@@ -74,8 +92,9 @@ ErrorDocument 404 /404.html
 
 # ─── MIME types ───────────────────────────────────────────────────────────────
 <IfModule mod_mime.c>
-  AddType image/svg+xml        .svg
-  AddType image/webp           .webp
-  AddType application/font-woff2 .woff2
-  AddType application/font-woff  .woff
+  AddType image/svg+xml           .svg
+  AddType image/webp              .webp
+  AddType application/font-woff2  .woff2
+  AddType application/font-woff   .woff
+  AddType application/json        .json
 </IfModule>

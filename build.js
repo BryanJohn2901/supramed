@@ -12,6 +12,27 @@ const sharp = require('sharp');
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
 
+/** Identificador do build — invalida cache de CSS/JS/imagens locais após deploy */
+function getBuildId() {
+  try {
+    return execSync('git rev-parse --short HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString()
+      .trim();
+  } catch {
+    return new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  }
+}
+
+/** Acrescenta ?v=BUILD_ID em assets locais (não afeta CDNs) */
+function applyCacheBusting(content, buildId) {
+  const q = `?v=${buildId}`;
+  const tag = (m, pre, url, post) => (url.includes('?') ? m : `${pre}${url}${q}${post}`);
+  return content
+    .replace(/((?:href|src)=["'])(\/(?:css|js)\/[^"']+\.(?:css|js))(")/gi, tag)
+    .replace(/((?:href|src)=["'])(\/assets\/[^"']+\.(?:jpe?g|png|webp|svg|gif|pdf|ico))(")/gi, tag)
+    .replace(/((?:href|src)=["'])(\/(?:favicon\.svg|logo[^"']*\.(?:png|jpe?g|svg)|og-image\.jpg))(")/gi, tag);
+}
+
 function log(msg) { process.stdout.write(`\x1b[36m→\x1b[0m ${msg}\n`); }
 function ok(msg)  { process.stdout.write(`\x1b[32m✓\x1b[0m ${msg}\n`); }
 function warn(msg) { process.stderr.write(`\x1b[33m⚠\x1b[0m ${msg}\n`); }
@@ -241,7 +262,7 @@ function generateSitemap() {
   log('Gerando sitemap.xml → dist/');
   const orderIdx = Object.fromEntries(SITEMAP_ORDER.map((p, i) => [p, i]));
   const pages = HTML_PAGES
-    .filter(([srcRel]) => srcRel !== '404.html')
+    .filter(([srcRel]) => srcRel !== '404.html' && srcRel !== 'contato/index.html')
     .map(([srcRel, destRel]) => ({
       srcRel,
       destRel,
@@ -287,18 +308,30 @@ function copyRootFiles() {
 }
 
 // ─── STEP 6: HTML ────────────────────────────────────────────────────────────
-async function buildHTML() {
+async function buildHTML(buildId) {
   log('Minificando HTML → dist/');
   for (const [srcRel, destRel] of HTML_PAGES) {
     const src = path.join(ROOT, srcRel);
     if (!fs.existsSync(src)) { warn(`  HTML não encontrado: ${srcRel}`); continue; }
     let content = readText(src);
     content = rewritePaths(content);
+    content = applyCacheBusting(content, buildId);
     try { content = await htmlMinify(content, HTML_MINIFY_OPTS); }
     catch (e) { warn(`  html-minifier falhou em ${srcRel}: ${e.message}`); }
     writeText(path.join(DIST, destRel), content);
     ok(`  ${destRel}`);
   }
+}
+
+function writeBuildMeta(buildId) {
+  const meta = {
+    buildId,
+    builtAt: new Date().toISOString(),
+    site: SITE_ORIGIN,
+  };
+  writeText(path.join(DIST, 'build-meta.json'), JSON.stringify(meta, null, 2));
+  writeText(path.join(DIST, 'build-id.txt'), buildId + '\n');
+  ok(`  cache bust: v=${buildId}`);
 }
 
 // ─── STEP 7: Validação de paths ───────────────────────────────────────────────
@@ -323,8 +356,9 @@ function validatePaths() {
   collectHTML(DIST);
 
   for (const ref of refs) {
-    if (!fs.existsSync(path.join(DIST, ref))) {
-      fail(`  FALTA: ${ref}`);
+    const filePath = ref.split('?')[0];
+    if (!fs.existsSync(path.join(DIST, filePath))) {
+      fail(`  FALTA: ${filePath}`);
       missing++;
     }
   }
@@ -343,6 +377,8 @@ async function main() {
 
   try { buildTailwind(); } catch (e) { fail(`Tailwind: ${e.message}`); process.exit(1); }
 
+  const buildId = getBuildId();
+
   log('Limpando dist/');
   fs.rmSync(DIST, { recursive: true, force: true });
   mkdirp(path.join(DIST, 'css'));
@@ -353,8 +389,9 @@ async function main() {
   await buildJS();
   await buildImages();
   copyRootFiles();
-  await buildHTML();
+  await buildHTML(buildId);
   generateSitemap();
+  writeBuildMeta(buildId);
   validatePaths();
 
   const elapsed = ((Date.now() - t0) / 1000).toFixed(1);

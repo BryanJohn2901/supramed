@@ -1208,3 +1208,43 @@ mark.search-hit {
 .link-whatsapp:hover i {
     transform: scale(1.1);
 }
+
+/* Selos e certificações — rodapé */
+.footer-certs__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 52rem;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .footer-certs__inner {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+.footer-certs__seal-link {
+    display: block;
+    flex-shrink: 0;
+    line-height: 0;
+}
+.footer-certs__seal {
+    width: 7.5rem;
+    height: auto;
+    border-radius: 50%;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
+    transition: transform 0.25s ease;
+}
+.footer-certs__seal-link:hover .footer-certs__seal {
+    transform: scale(1.04);
+}
+.footer-certs__text {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .footer-certs__text {
+        text-align: left;
+    }
+}
