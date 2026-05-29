@@ -25,13 +25,7 @@ window.SUPRAMED_CONFIG = {
         'nossas-atuacoes': 'Olá, Supramed Saúde! Vi a página Nossa Atuação (PPPs, infraestrutura, facilities, gestão médica) e quero saber qual solução se encaixa no meu projeto.',
         cases: 'Olá, Supramed Saúde! Vi o case do Hospital Papa Francisco em Pinhais e gostaria de conversar sobre um projeto semelhante no meu município.',
         blog: 'Olá, Supramed Saúde! Estava lendo o blog e quero falar com um especialista.',
-        'blog-ppp-saude': 'Olá, Supramed Saúde! Li o artigo "Como estruturar uma PPP de saúde" e quero estruturar um projeto.',
-        'blog-hospital-pinhais': 'Olá, Supramed Saúde! Li o case do Hospital Papa Francisco (Pinhais) e quero saber como vocês podem apoiar minha cidade.',
-        'blog-gestao-equipes': 'Olá, Supramed Saúde! Li o artigo sobre gestão de equipes em saúde pública e quero conversar.',
-        'blog-governanca': 'Olá, Supramed Saúde! Li o artigo sobre governança em PPP hospitalar e quero mais informações.',
-        'blog-tecnologia-integrada': 'Olá, Supramed Saúde! Li o artigo sobre tecnologia na gestão hospitalar e quero falar com a equipe.',
-        'blog-humanizacao': 'Olá, Supramed Saúde! Li o artigo sobre humanização hospitalar e quero conhecer as soluções de vocês.',
-        'blog-engenharia-clinica': 'Olá, Supramed Saúde! Li o artigo sobre engenharia clínica e quero saber como vocês atuam nessa área.',
+        'blog-hospital-feira-de-santana': 'Olá, Supramed Saúde! Li a notícia da PPP do Hospital Municipal de Feira de Santana e quero conversar com a equipe.',
         feira: 'Olá, Supramed Saúde! Vi a notícia da PPP do Hospital Municipal de Feira de Santana e quero conversar com a equipe.'
     }
 };

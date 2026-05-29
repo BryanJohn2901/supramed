@@ -122,14 +122,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <main>
         <!-- Hero do post -->
-        <section class="page-hero page-hero--image">
+        <section class="page-hero page-hero--image page-hero--center">
             <img src="/assets/images/{{IMAGEM}}" alt="{{TITULO}}" class="page-hero__bg">
             <div class="page-hero__overlay"></div>
             <div class="container mx-auto px-6 relative z-10 w-full">
-                <div class="max-w-3xl" data-aos="fade-up">
+                <div class="page-hero__content max-w-3xl" data-aos="fade-up">
                     <p class="page-hero__eyebrow">{{CATEGORIA}}</p>
                     <h1 class="page-hero__title">{{TITULO}}</h1>
-                    <div class="flex flex-wrap items-center gap-4 mt-4 text-white/80 text-sm font-medium">
+                    <div class="page-hero__meta flex flex-wrap items-center gap-4 mt-4 text-white/80 text-sm font-medium">
                         <span class="flex items-center gap-2"><i class="fa-regular fa-calendar text-brand-tealLight"></i> {{DATA}}</span>
                         <span class="text-white/40">·</span>
                         <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-tealLight"></i> {{TEMPO_LEITURA}} min de leitura</span>
@@ -209,21 +209,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- Artigos Relacionados — substitua pelos artigos mais relevantes -->
-        <section class="section-page section-page--alt">
+        <!-- Artigos relacionados — cards gerados por post-enhance.js (configure em assets/js/post-enhance.js) -->
+        <section class="section-page section-page--alt post-related" aria-labelledby="post-related-heading">
             <div class="container mx-auto px-6">
-                <h2 class="text-2xl font-bold text-brand-dark mb-10" data-aos="fade-up">Artigos Relacionados</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <article class="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-gray-100 transition-all duration-500 hover:-translate-y-1" data-aos="fade-up">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="/assets/images/meeting-ppp.jpg" alt="Artigo relacionado" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        </div>
-                        <div class="p-6">
-                            <span class="inline-block bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Categoria</span>
-                            <h3 class="font-bold text-brand-dark mb-2 leading-snug group-hover:text-brand-teal transition-colors">Título do artigo relacionado</h3>
-                            <a href="/blog/slug-do-artigo/" class="inline-flex items-center gap-2 text-brand-teal font-semibold text-sm mt-3 hover:underline">Ler artigo <i class="fa-solid fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </article>
+                <div class="post-related__head" data-aos="fade-up">
+                    <h2 id="post-related-heading" class="text-2xl font-bold text-brand-dark">Artigos relacionados</h2>
+                    <p class="post-related__intro">Conteúdos selecionados sobre gestão hospitalar, PPPs em saúde e inovação no setor público.</p>
+                </div>
+                <div class="post-related__grid" data-post-related-grid></div>
+                <div class="post-related__footer" data-aos="fade-up">
+                    <a href="/blog/" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-brand-dark text-brand-dark font-bold hover:bg-brand-dark hover:text-white transition-colors">Ver todos os artigos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -308,5 +303,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/post-enhance.js"></script>
 </body>
 </html>

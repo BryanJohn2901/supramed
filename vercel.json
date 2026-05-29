@@ -15,7 +15,21 @@
     { "source": "/contato/", "destination": "/fale-conosco/", "permanent": true },
     { "source": "/contato.html", "destination": "/fale-conosco/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/blog/ppp-saude", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/ppp-saude/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/hospital-pinhais", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/hospital-pinhais/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/gestao-equipes", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/gestao-equipes/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/governanca", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/governanca/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/tecnologia-integrada", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/tecnologia-integrada/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/humanizacao", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/humanizacao/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/engenharia-clinica", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/engenharia-clinica/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true }
   ],
   "headers": [
     {
