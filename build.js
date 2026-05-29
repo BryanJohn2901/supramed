@@ -138,8 +138,8 @@ async function buildJS() {
       writeText(path.join(DIST, 'js', file), result.code);
       ok(`  js/${file}  ${kb(raw.length)} → ${kb(result.code.length)}`);
     } catch (e) {
-      warn(`  Terser falhou em ${file}: ${e.message} — copiando sem minificação`);
-      writeText(path.join(DIST, 'js', file), rewritten);
+      fail(`  Terser falhou em ${file}: ${e.message}`);
+      process.exit(1);
     }
   }
 }

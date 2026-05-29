@@ -151,8 +151,8 @@
             footerEl.innerHTML = renderFooter();
         }
 
-        if (window.Supramed SaúdeSite) {
-            window.Supramed SaúdeSite.setHeaderOffset();
+        if (window.SupramedSite) {
+            window.SupramedSite.setHeaderOffset();
         }
         document.dispatchEvent(new CustomEvent('supramed:layout-ready'));
     });
