@@ -178,5 +178,5 @@
         setHeaderOffset();
     });
 
-    window.SupramedSite = { setHeaderOffset: setHeaderOffset };
+    window.Supramed SaúdeSite = { setHeaderOffset: setHeaderOffset };
 })();

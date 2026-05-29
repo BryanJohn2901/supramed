@@ -22,7 +22,7 @@
     function getMessage(pageId, custom) {
         if (custom) return custom;
         var messages = getConfig().whatsappMessages || {};
-        return messages[pageId] || messages.default || 'Olá! Vim pelo site da Supramed.';
+        return messages[pageId] || messages.default || 'Olá! Vim pelo site da Supramed Saúde.';
     }
 
     function buildUrl(message) {
@@ -51,7 +51,7 @@
         var pageId = getPageId();
         var cfg = getConfig();
         var defaultMsg = getMessage(pageId);
-        var title = cfg.whatsappWidgetTitle || 'Supramed';
+        var title = cfg.whatsappWidgetTitle || 'Supramed Saúde';
         var greeting =
             cfg.whatsappWidgetGreeting ||
             'Olá! Conte sobre seu projeto de saúde, PPP ou gestão hospitalar — respondemos pelo WhatsApp.';

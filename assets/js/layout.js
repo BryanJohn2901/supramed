@@ -47,7 +47,7 @@
                     '<div class="container mx-auto px-6 py-3.5 flex justify-between items-center font-sans min-h-[44px]">' +
                         '<div class="flex items-center gap-3">' +
                             '<span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>' +
-                            '<span class="text-gray-200 font-medium tracking-wider">Portal Institucional Supramed</span>' +
+                            '<span class="text-gray-200 font-medium tracking-wider">Portal Institucional Supramed Saúde</span>' +
                         '</div>' +
                         '<div class="flex items-center gap-6">' +
                             '<a href="mailto:contato@supramedsaude.com.br" class="hover:text-brand-teal transition-colors flex items-center gap-2"><i class="fa-regular fa-envelope"></i> contato@supramedsaude.com.br</a>' +
@@ -127,7 +127,7 @@
                         '</div>' +
                     '</div>' +
                     '<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">' +
-                        '<p class="text-xs text-gray-500 font-medium">&copy; 2026 Supramed. Todos os direitos reservados.</p>' +
+                        '<p class="text-xs text-gray-500 font-medium">&copy; 2026 Supramed Saúde. Todos os direitos reservados.</p>' +
                         '<div class="flex items-center gap-6 text-xs text-gray-500 font-medium">' +
                             '<a href="/politica-privacidade/" class="hover:text-brand-teal transition-colors">Política de Privacidade</a>' +
                             '<a href="/termos-de-uso/" class="hover:text-brand-teal transition-colors">Termos de Uso</a>' +
@@ -151,8 +151,8 @@
             footerEl.innerHTML = renderFooter();
         }
 
-        if (window.SupramedSite) {
-            window.SupramedSite.setHeaderOffset();
+        if (window.Supramed SaúdeSite) {
+            window.Supramed SaúdeSite.setHeaderOffset();
         }
         document.dispatchEvent(new CustomEvent('supramed:layout-ready'));
     });

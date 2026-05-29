@@ -373,7 +373,7 @@ function validatePaths() {
 // ─── MAIN ─────────────────────────────────────────────────────────────────────
 async function main() {
   const t0 = Date.now();
-  console.log('\x1b[1m\n  Build Supramed — Produção\n\x1b[0m');
+  console.log('\x1b[1m\n  Build Supramed Saúde — Produção\n\x1b[0m');
 
   try { buildTailwind(); } catch (e) { fail(`Tailwind: ${e.message}`); process.exit(1); }
 
